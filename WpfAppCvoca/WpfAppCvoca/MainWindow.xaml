@@ -38,7 +38,8 @@
 
                 <TextBlock Text="Cvoca Dashboard" Style="{StaticResource PageTitleText}" />
 
-                <Button Grid.Column="1" Width="30" Height="30" Content="⚙" Click="BtnSettings_Click" />
+                <Button Grid.Column="1" Width="30" Height="30" Content="{Binding Theme.IsDarkMode, Converter={StaticResource BoolToThemeTextConverter}}" 
+                        Command="{Binding Theme.ToggleThemeCommand}"/>
                 <Button Grid.Column="2" Width="30" Height="30" Content="─" Click="BtnMinimize_Click" />
                 <Button Grid.Column="3" Width="30" Height="30" Content="▢" Click="BtnMaximize_Click" />
                 <Button Grid.Column="4" Width="40" Height="30" Content="✕" Click="BtnClose_Click" />
@@ -61,10 +62,9 @@
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding DatabaseName}" 
                            FontWeight="Bold" FontSize="14" 
                            Foreground="{Binding Theme.ForegroundColor}" />
-                <Button Grid.Row="0" Grid.Column="2" Height="30" Content="Show All"
-                        Command="{Binding ChangeStepCommand}" CommandParameter="0"/>
-                <Button Grid.Row="0" Grid.Column="3" Content="{Binding Theme.IsDarkMode, Converter={StaticResource BoolToThemeTextConverter}}" 
-                        Command="{Binding Theme.ToggleThemeCommand}"/>
+                <!-- <Button Grid.Row="0" Grid.Column="2" Content="{Binding Theme.IsDarkMode, Converter={StaticResource BoolToThemeTextConverter}}" 
+                        Command="{Binding Theme.ToggleThemeCommand}"/> -->
+                <Button Grid.Row="0" Grid.Column="3" Content="Home" Command="{Binding ChangeStepCommand}" CommandParameter="0"/>
 
                 <!-- 둘째 줄: Day / Pass -->
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Day" 

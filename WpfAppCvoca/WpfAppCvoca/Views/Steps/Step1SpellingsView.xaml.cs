@@ -20,7 +20,8 @@ namespace WpfAppCvoca.Views.Steps
             if (e.NewValue != null && SpellingDataGrid != null)
             {
                 var viewModel = e.NewValue as WpfAppCvoca.ViewModels.MainViewModel;
-                if (viewModel != null && SpellingDataGrid.ItemsSource == null && viewModel.SpellingItems.Count > 0)
+                if (viewModel != null && SpellingDataGrid.ItemsSource == null && 
+                    viewModel.SpellingItems != null && viewModel.SpellingItems.Count > 0)
                 {
                     SpellingDataGrid.ItemsSource = viewModel.SpellingItems;
                 }
@@ -61,7 +62,8 @@ namespace WpfAppCvoca.Views.Steps
                 return;
 
             // ItemsSource가 null이면 수동으로 설정
-            if (SpellingDataGrid.ItemsSource == null && viewModel.SpellingItems.Count > 0)
+            if (SpellingDataGrid.ItemsSource == null && 
+                viewModel.SpellingItems != null && viewModel.SpellingItems.Count > 0)
             {
                 SpellingDataGrid.ItemsSource = viewModel.SpellingItems;
             }

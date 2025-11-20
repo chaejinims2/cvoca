@@ -204,9 +204,8 @@ namespace WpfAppCvoca.ViewModels
         {
             get
             {
-                if (_currentStep == 0)
-                    return Step0ViewModel?.SpellingSummary ?? string.Empty;
-                else if (_currentStep == 1)
+                // Step 0은 SpellingSummary가 없음 (채점 기능 제거)
+                if (_currentStep == 1)
                     return Step1ViewModel?.SpellingSummary ?? string.Empty;
                 return string.Empty;
             }
@@ -246,9 +245,8 @@ namespace WpfAppCvoca.ViewModels
         {
             get
             {
-                if (_currentStep == 0)
-                    return Step0ViewModel?.CheckSpellingCommand;
-                else if (_currentStep == 1)
+                // Step 0은 CheckSpellingCommand가 없음 (채점 기능 제거)
+                if (_currentStep == 1)
                     return Step1ViewModel?.CheckSpellingCommand;
                 return null;
             }
@@ -258,9 +256,8 @@ namespace WpfAppCvoca.ViewModels
         {
             get
             {
-                if (_currentStep == 0)
-                    return Step0ViewModel?.SaveCommand;
-                else if (_currentStep == 1)
+                // Step 0은 Step0ViewModel의 SaveCommand를 직접 사용 (MainViewModel을 거치지 않음)
+                if (_currentStep == 1)
                     return Step1ViewModel?.SaveCommand;
                 return null;
             }
@@ -270,9 +267,8 @@ namespace WpfAppCvoca.ViewModels
         {
             get
             {
-                if (_currentStep == 0)
-                    return Step0ViewModel?.SpellingItems;
-                else if (_currentStep == 1)
+                // Step 0은 WordItems를 사용 (SpellingItems가 아님)
+                if (_currentStep == 1)
                     return Step1ViewModel?.SpellingItems;
                 return null;
             }
@@ -289,11 +285,10 @@ namespace WpfAppCvoca.ViewModels
 
             // Step ViewModels 초기화
             Step0ViewModel = new Step0ShowAllViewModel();
-            Step0ViewModel.SpellingSummaryChanged += (s, e) => OnPropertyChanged(nameof(SpellingSummary));
-            Step0ViewModel.SpellingItems.CollectionChanged += (s, e) => 
+            // Step 0은 채점 기능이 없으므로 SpellingSummaryChanged 이벤트 없음
+            Step0ViewModel.WordItems.CollectionChanged += (s, e) => 
             {
-                if (_currentStep == 0)
-                    OnPropertyChanged(nameof(SpellingItems));
+                // Step 0은 WordItems를 사용하므로 SpellingItems 변경 알림 불필요
             };
             
             Step1ViewModel = new Step1SpellingsViewModel();
@@ -349,7 +344,7 @@ namespace WpfAppCvoca.ViewModels
                 // Step 0 (Show All)일 때 모든 단어 로드
                 if (step == 0)
                 {
-                    Step0ViewModel?.LoadAllWords();
+                    Step0ViewModel?.LoadAllWordItems();
                 }
                 // Step 1로 변경할 때는 SelectedDay에 맞는 데이터 로드
                 else if (step == 1)
