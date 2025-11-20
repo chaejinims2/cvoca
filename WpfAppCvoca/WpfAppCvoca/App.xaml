@@ -4,6 +4,51 @@
              xmlns:local="clr-namespace:WpfAppCvoca"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- 헤더 텍스트 -->
+        <Style x:Key="PageTitleText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Margin" Value="0,0,8,0" />
+        </Style>
+
+        <Style x:Key="SectionTitleText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Margin" Value="0,0,8,0" />
+        </Style>
+
+        <Style x:Key="CaptionText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="11" />
+            <Setter Property="Margin" Value="0,0,4,0" />
+        </Style>
+
+        <!-- 툴바 영역용 패널 -->
+        <Style x:Key="ToolbarPanel" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal" />
+            <Setter Property="Margin" Value="0,0,0,8" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+
+        <!-- 기본 버튼 스타일 – 색은 각 컨트롤에서 Theme 바인딩 -->
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="4,0,0,0" />
+            <Setter Property="Padding" Value="10,3" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Cursor" Value="Hand" />
+        </Style>
+
+        <!-- 기본 DataGrid 스타일 – 색은 여전히 Theme에서 바인딩 -->
+        <Style TargetType="DataGrid">
+            <Setter Property="AutoGenerateColumns" Value="False" />
+            <Setter Property="CanUserAddRows" Value="False" />
+            <Setter Property="CanUserDeleteRows" Value="False" />
+            <Setter Property="GridLinesVisibility" Value="None" />
+            <Setter Property="HeadersVisibility" Value="All" />
+            <Setter Property="ColumnHeaderHeight" Value="32" />
+            <Setter Property="RowHeight" Value="30" />
+            <Setter Property="Margin" Value="0,0,0,8" />
+        </Style>
+
     </Application.Resources>
 </Application>

@@ -8,106 +8,57 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,8">
-            <TextBlock Text="{Binding StepHeaderText}" FontWeight="Bold" FontSize="13" VerticalAlignment="Center"
-                       Foreground="{Binding Theme.ForegroundColor}" />
+        <StackPanel Grid.Row="0" Style="{StaticResource ToolbarPanel}">
+            <TextBlock Text="{Binding StepHeaderText}"
+                    Style="{StaticResource SectionTitleText}"
+                    Foreground="{Binding Theme.ForegroundColor}" />
             <Border Width="12" />
-            <Button Content="Play Audio" Padding="8,2" Margin="0,0,4,0" VerticalAlignment="Center"
+            <Button Content="Play Audio"
+                    Command="{Binding PlayCommand}"
                     Background="{Binding Theme.ButtonBackgroundColor}"
                     Foreground="{Binding Theme.ButtonForegroundColor}" />
-            <Button Content="Stop" Padding="8,2" VerticalAlignment="Center"
+            <Button Content="Stop"
+                    Command="{Binding StopCommand}"
                     Background="{Binding Theme.ButtonBackgroundColor}"
                     Foreground="{Binding Theme.ButtonForegroundColor}" />
         </StackPanel>
 
-        <DataGrid x:Name="SpellingDataGrid" Grid.Row="1" Margin="0,0,0,8"
-                  AutoGenerateColumns="False" IsReadOnly="False"
-                  CanUserAddRows="False" CanUserDeleteRows="False"
-                  SelectionMode="Extended" SelectionUnit="FullRow"
-                  ItemsSource="{Binding SpellingItems}"
-                  Background="{Binding Theme.DataGridBackgroundColor}"
-                  Foreground="{Binding Theme.DataGridForegroundColor}"
-                  RowBackground="{Binding Theme.DataGridRowBackgroundColor}"
-                  AlternatingRowBackground="{Binding Theme.DataGridRowBackgroundColor}"
-                  GridLinesVisibility="None" HeadersVisibility="All"
-                  ColumnHeaderHeight="34" RowHeight="32"
-                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                  ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <DataGrid x:Name="SpellingDataGrid" Grid.Row="1"
+                ItemsSource="{Binding SpellingItems}"
+                Background="{Binding Theme.DataGridBackgroundColor}"
+                Foreground="{Binding Theme.DataGridForegroundColor}"
+                RowBackground="{Binding Theme.DataGridRowBackgroundColor}"
+                AlternatingRowBackground="{Binding Theme.DataGridRowBackgroundColor}">
             <DataGrid.Resources>
+                <!-- Row만 살짝 커스텀 -->
                 <Style TargetType="DataGridRow">
-                    <Setter Property="Background" Value="{Binding DataContext.Theme.DataGridRowBackgroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Setter Property="Foreground" Value="{Binding DataContext.Theme.DataGridForegroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Setter Property="BorderBrush" Value="{Binding DataContext.Theme.BorderColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Setter Property="BorderThickness" Value="0,0,0,1" />
                     <Setter Property="Padding" Value="6,0" />
-                    <Setter Property="SnapsToDevicePixels" Value="True" />
-                    <Style.Triggers>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Background" Value="{Binding DataContext.Theme.AccentColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                            <Setter Property="Foreground" Value="White" />
-                        </Trigger>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{Binding DataContext.Theme.ScrollBarThumbHoverColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                            <Setter Property="Foreground" Value="White" />
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-                <Style TargetType="DataGridCell">
-                    <Setter Property="BorderBrush" Value="{Binding DataContext.Theme.BorderColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
                     <Setter Property="BorderThickness" Value="0,0,0,1" />
-                    <Setter Property="Padding" Value="10,4" />
-                    <Setter Property="Foreground" Value="{Binding DataContext.Theme.DataGridForegroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="BorderBrush"
+                            Value="{Binding DataContext.Theme.BorderColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
                     <Style.Triggers>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Background"
+                                    Value="{Binding DataContext.Theme.AccentColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
                             <Setter Property="Foreground" Value="White" />
                         </Trigger>
                     </Style.Triggers>
                 </Style>
+                <!-- ColumnHeader는 기본값에 색만 바인딩 -->
                 <Style TargetType="DataGridColumnHeader">
-                    <Setter Property="Background" Value="{Binding DataContext.Theme.DataGridHeaderBackgroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Setter Property="Foreground" Value="{Binding DataContext.Theme.DataGridHeaderForegroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Setter Property="BorderBrush" Value="{Binding DataContext.Theme.BorderColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Setter Property="BorderThickness" Value="0,0,0,1" />
-                    <Setter Property="HorizontalContentAlignment" Value="Center" />
-                    <Setter Property="FontWeight" Value="SemiBold" />
-                    <Setter Property="Padding" Value="10,6" />
-                    <Setter Property="Cursor" Value="Hand" />
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{Binding DataContext.Theme.ScrollBarThumbHoverColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                            <Setter Property="Foreground" Value="White" />
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-                <Style TargetType="ScrollBar">
-                    <Setter Property="Background" Value="{Binding DataContext.Theme.ScrollBarBackgroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Style.Resources>
-                        <Style TargetType="Thumb">
-                            <Setter Property="Background" Value="{Binding DataContext.Theme.ScrollBarThumbColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                            <Setter Property="BorderBrush" Value="Transparent" />
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="{Binding DataContext.Theme.ScrollBarThumbHoverColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Style.Resources>
+                    <Setter Property="Background"
+                            Value="{Binding DataContext.Theme.DataGridHeaderBackgroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+                    <Setter Property="Foreground"
+                            Value="{Binding DataContext.Theme.DataGridHeaderForegroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
                 </Style>
             </DataGrid.Resources>
+
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Word ID" Width="70" Binding="{Binding WordId}" IsReadOnly="True" />
-                <!-- <DataGridTextColumn Header="Day No" Width="60" Binding="{Binding DayNo}" IsReadOnly="True" /> -->
-                <!-- <DataGridTextColumn Header="Word No" Width="70" Binding="{Binding WordNo}" IsReadOnly="True" /> -->
                 <DataGridTextColumn Header="Word" Width="*"
                                     Binding="{Binding CorrectSpelling, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <!-- <DataGridTextColumn Header="Your Spelling" Width="*"
-                                    Binding="{Binding UserSpelling, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" /> -->
-                <!-- <DataGridTextColumn Header="Result" Width="60" Binding="{Binding ResultMark}" IsReadOnly="True" /> -->
             </DataGrid.Columns>
         </DataGrid>
-
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left">
             <Button Content="Submit" Padding="12,2" Margin="0,0,8,0" Command="{Binding CheckSpellingCommand}"
                     Background="{Binding Theme.ButtonBackgroundColor}"
