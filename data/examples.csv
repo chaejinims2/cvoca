@@ -1,0 +1,642 @@
+example_id,definition_id,example_no,example_sentence
+100,10,0,He averted fininancial disaster by selling his pharmaceutical stocks before they crashed.
+200,20,0,Providing a healthy breakfast to primary school students will have an immediate effect on their academic performance.
+300,30,0,Critics did not fully appreciate Van Gogh’s talent or artistic vision untils long after his passing.
+310,31,0,"When walking through the slums of Kolkata, you immediately appreciate the depth of poverty faced by local residents."
+400,40,0,We will have to divide the group into parties of eight for everyone’s convenience on the tour.
+500,50,0,Any queries regarding room and trip reservations can be answered by the hotel’s front desk attendant.
+600,60,0,"Tourist exploring the island can harm the natural environment, often without even realising it."
+610,61,0,Lad procedures must be followed in order to prevent personal harm.
+700,70,0,The study’s primary objective is to find out why the coral reefs are dying.
+710,71,0,Some art critics believe the value of art is determined by objective methods of evoluation rather than individuals’ reactions.
+800,80,0,TempExample_800
+900,90,0,TempExample_900
+1000,100,0,TempExample_1000
+1100,110,0,TempExample_1100
+1200,120,0,TempExample_1200
+1300,130,0,TempExample_1300
+1400,140,0,TempExample_1400
+1500,150,0,TempExample_1500
+1600,160,0,TempExample_1600
+1700,170,0,TempExample_1700
+1800,180,0,TempExample_1800
+1900,190,0,TempExample_1900
+2000,200,0,TempExample_2000
+2100,210,0,The films of Luca Guadino evoke the ‘Golden Age’ of classical cinema.
+2200,220,0,"For networking purposes, it’s important to pay attention to the job titles of the people you meet at a professional conference."
+2300,230,0,The union launched the strike because it was not willing to make steep concessions regarding overtime pay.
+2310,231,0,University students receive a concession of 50% on admission to sporting events.
+2400,240,0,Parents should always try to set aside the time to read and play with their young children.
+2500,250,0,The orientation session covering employee health insurance will be replaced bt a welcome speech from the CEO.
+2600,260,0,New laws ought to be made to protect residents and the environment from the dangers of natural gas extraction.
+2700,270,0,The local wildlife authority will also answer queries about seasonal hunting and fishing limits.
+2800,280,0,Many advertising experts agree that releasing several short commercials instead of a single long one is a clever marketing scheme.
+2900,290,0,The ruins of several Roman forts can still be seen throughout tge English countryside.
+3000,300,0,"Nowadays, people are too obsessed with the fabulous lifestyles of, celebrities."
+3100,310,0,TempExample_3100
+3200,320,0,TempExample_3200
+3300,330,0,TempExample_3300
+3400,340,0,TempExample_3400
+3500,350,0,TempExample_3500
+3600,360,0,TempExample_3600
+3700,370,0,TempExample_3700
+3800,380,0,TempExample_3800
+3900,390,0,TempExample_3900
+4000,400,0,TempExample_4000
+4100,410,0,TempExample_4100
+4200,420,0,TempExample_4200
+4300,430,0,TempExample_4300
+4400,440,0,TempExample_4400
+4500,450,0,TempExample_4500
+4600,460,0,TempExample_4600
+4700,470,0,TempExample_4700
+4800,480,0,TempExample_4800
+4900,490,0,TempExample_4900
+5000,500,0,TempExample_5000
+5100,510,0,TempExample_5100
+5200,520,0,TempExample_5200
+5300,530,0,TempExample_5300
+5400,540,0,TempExample_5400
+5500,550,0,TempExample_5500
+5600,560,0,TempExample_5600
+5700,570,0,TempExample_5700
+5800,580,0,TempExample_5800
+5900,590,0,TempExample_5900
+6000,600,0,TempExample_6000
+6100,610,0,TempExample_6100
+6200,620,0,TempExample_6200
+6300,630,0,TempExample_6300
+6400,640,0,TempExample_6400
+6500,650,0,TempExample_6500
+6600,660,0,TempExample_6600
+6700,670,0,TempExample_6700
+6800,680,0,TempExample_6800
+6900,690,0,TempExample_6900
+7000,700,0,TempExample_7000
+7100,710,0,TempExample_7100
+7200,720,0,TempExample_7200
+7300,730,0,TempExample_7300
+7400,740,0,TempExample_7400
+7500,750,0,TempExample_7500
+7600,760,0,TempExample_7600
+7700,770,0,TempExample_7700
+7800,780,0,TempExample_7800
+7900,790,0,TempExample_7900
+8000,800,0,TempExample_8000
+8100,810,0,TempExample_8100
+8200,820,0,TempExample_8200
+8300,830,0,TempExample_8300
+8400,840,0,TempExample_8400
+8500,850,0,TempExample_8500
+8600,860,0,TempExample_8600
+8700,870,0,TempExample_8700
+8800,880,0,TempExample_8800
+8900,890,0,TempExample_8900
+9000,900,0,TempExample_9000
+9100,910,0,TempExample_9100
+9200,920,0,TempExample_9200
+9300,930,0,TempExample_9300
+9400,940,0,TempExample_9400
+9500,950,0,TempExample_9500
+9600,960,0,TempExample_9600
+9700,970,0,TempExample_9700
+9800,980,0,TempExample_9800
+9900,990,0,TempExample_9900
+10000,1000,0,TempExample_10000
+10100,1010,0,TempExample_10100
+10200,1020,0,TempExample_10200
+10300,1030,0,TempExample_10300
+10400,1040,0,TempExample_10400
+10500,1050,0,TempExample_10500
+10600,1060,0,TempExample_10600
+10700,1070,0,TempExample_10700
+10800,1080,0,TempExample_10800
+10900,1090,0,TempExample_10900
+11000,1100,0,TempExample_11000
+11100,1110,0,TempExample_11100
+11200,1120,0,TempExample_11200
+11300,1130,0,TempExample_11300
+11400,1140,0,TempExample_11400
+11500,1150,0,TempExample_11500
+11600,1160,0,TempExample_11600
+11700,1170,0,TempExample_11700
+11800,1180,0,TempExample_11800
+11900,1190,0,TempExample_11900
+12000,1200,0,TempExample_12000
+12100,1210,0,TempExample_12100
+12200,1220,0,TempExample_12200
+12300,1230,0,TempExample_12300
+12400,1240,0,TempExample_12400
+12500,1250,0,TempExample_12500
+12600,1260,0,TempExample_12600
+12700,1270,0,TempExample_12700
+12800,1280,0,TempExample_12800
+12900,1290,0,TempExample_12900
+13000,1300,0,TempExample_13000
+13100,1310,0,TempExample_13100
+13200,1320,0,TempExample_13200
+13300,1330,0,TempExample_13300
+13400,1340,0,TempExample_13400
+13500,1350,0,TempExample_13500
+13600,1360,0,TempExample_13600
+13700,1370,0,TempExample_13700
+13800,1380,0,TempExample_13800
+13900,1390,0,TempExample_13900
+14000,1400,0,TempExample_14000
+14100,1410,0,TempExample_14100
+14200,1420,0,TempExample_14200
+14300,1430,0,TempExample_14300
+14400,1440,0,TempExample_14400
+14500,1450,0,TempExample_14500
+14600,1460,0,TempExample_14600
+14700,1470,0,TempExample_14700
+14800,1480,0,TempExample_14800
+14900,1490,0,TempExample_14900
+15000,1500,0,TempExample_15000
+15100,1510,0,The tourists watched from the ship as a pod of humpback whales emerged from the ocean depths
+15200,1520,0,The discovery of penicilin in 1928 brought about numerous health benefits for people suffering from bacterial diseases and infections
+15210,1521,0,Experimenting with different musical genres rather than sticking to just one can benefit the creative process of aspiring musicians
+15300,1530,0,Since the themes contained in modern art can be perplexing and obscure
+15400,1540,0,"Using GPS and satellite imagery, scientists were able to track the herd of reindeer across nothern Canada"
+15500,1550,0,Political philosophers in the 17th century offered contrasting views on the conditions that led to civil society
+15600,1560,0,The product development tean was ready to halt the project if the market survey’s result was negative about the new flavours.
+15610,1561,0,Hiding financial debt from a business partner can bring even the most promising relationships to a halt
+15700,1570,0,It was necessary to obtain more samples from the glacial ice for further study
+15800,1580,0,"The remaining male rhinos were put into a specialised breeding programme that would, biologists hoped, save the species"
+15900,1590,0,The building was undamaged apart form a few shattered windows
+16000,1600,0,The director was able to secure funding to keep the homeless shelter open this winter
+16010,1601,0,"During training, flight attendants learn how to make passengers feel safe and secure on board"
+16100,1610,0,"By laws, all cinemas, sports stadium an dconcert hall are required to have special seating areas for the disabled"
+16200,1620,0,A recent report claims that the social pressure to dress fashonably marginalise children from low-income families.
+16300,1630,0,Introducing the Asian carp to American waterways affected the ecosystems of several lakes and rivers
+16400,1640,0,International trade agreements involve compromises from all participating nations
+16410,1641,0,Youths who are involved with community programmes developa sense of their strengths and weaknesses
+16420,1642,0,Dog show competitors are so involved in the sport that they may even spend their total income on their dog.
+16500,1650,0,Draining the lake would provide water for residents in the drought-affected region
+16510,1651,0,Marathon runners are drained of energy during the race and should have nutritious food in orders to recover
+16600,1660,0,The civil war had a profound effect on the economies of the neighbouring countries
+16700,1670,0,One of the obvious benefits of a plant-based diet is a reduction in body fat
+16800,1680,0,Several engineers volunteered to travel to the developing country to help improve the irrigation systems of its farmlands
+16900,1690,0,"To this day, many people argue that concerns about climate change are exaggerateed by certain media sources and political parties"
+17000,1700,0,Interest in home gardening has been increasing steadily over the past decade
+17100,1710,0,"By draining the wetland, land available for cultivation in the region increased by 25%"
+17200,1720,0,"During an eruption, solid rock melts into liquid magma and flows outward from the volcano"
+17300,1730,0,The research team’s next goal is to create an artificial intelligence that can mimic human emotions
+17400,1740,0,"Take care when picking mushrooms in the forest, as only a few varieties are edible"
+17500,1750,0,Speakers are installed in all hotel rooms to alert guests in case of an emergency such as a fire
+17510,1751,0,Speakers are installed in all hotel rooms to alert guests in case of an emergency such as a fire
+17600,1760,0,The current food production level will not be enough to feed Earth’s expected future population size
+17700,1770,0,"For developing countries, participating in the Olympic Games became a means of earning recognition on the international stage"
+17800,1780,0,The social media site has faced harsh citicism for intrusions into its users’ privacy
+17900,1790,0,Eary civilisations used hollow coconut shells as a means of serving and storing food
+18000,1800,0,The Accounting Department manages the distribution of pay to out freelance writers
+18100,1810,0,"Only rearly is an exotic pet allowed in an airplane cabin, even if it is designated as a support animal"
+18200,1820,0,Charts and graphs will aid audience understanding by visualising your data
+18210,1821,0,"Tablet computers have become an invaluable study aid for all ages of students"""
+18300,1830,0,It's rear to sustain a friendship from primary school through to adulthood
+18400,1840,0,The initial stp in establishing a personal relationship is to have communication
+18500,1850,0,"In order to keep tracking the location of the endangered animals, precise GPS data provided from satellites is necessary"
+18600,1860,0,A sharp spade was required to penetrate the tough topsoil
+18610,1861,0,Only advanced readers will be able to penetrate the author’s dense writing style
+18700,1870,0,Flexible working hours draw much interest from individuals seeking work-life balance
+18800,1880,0,Entire itineraries should be reviewed before confirming travel arrangements
+18900,1890,0,The theory process that the human brain inherently has the tools for learning a language
+19000,1900,0,The brothers’ conflict over the money caused a long period of extrangement beteween them
+19100,1910,0,The algae growing on the lke’s surface could seriously affect the mount of oxygen in the water
+19200,1920,0,English is on of Singapore’s four official languages
+19210,1921,0,Government officials arrived at the site of the earthquake to begin assessing the damage
+19300,1930,0,An airdrop system was designed to deliver supplies to isolated regions
+19400,1940,0,Not every major gorbenment accepts that global warming is caused by human actions
+19500,1950,0,"The functional and innovative design of the building was widely acclaimed, making it the city’s most distinctive landmark"
+19510,1951,0,"Although the song was unpopular with critics upon its initial release, Queen’s ‘Bohemian Rhapsody’ eventually received worldwide acclaim"
+19600,1960,0,Workaholics should not underestimate the value of including leisure time in their bush schedules
+19700,1970,0,Housing prices rose steeply in the heavily populated neighbourhoods of London
+19800,1980,0,The success of the new mobile device is heavily dependent on how efficient its batteries are in actual use
+19900,1990,0,The ancient Roman city of Pompeii was destroyed by the violent eruption of Mt. Vesuvius in 79 A.D.
+20000,2000,0,Some major telecommunications companies are hoping to make WiFi internet avilable virtually anywhere throughout the entire United States
+20100,2010,0,"Due to the ongoing drought, the government imposed severe limits on water usage for lawn maintenance"
+20200,2020,0,"With the steay growth in global population, scientists worry that we’ll soon reach the Earth’s full capacity for sustaining human life"
+20300,2030,0,The team built horizontal and vertical tunnels to excavate buried pottery and weapons
+20400,2040,0,"Erosion by wind, rain and the Colorado River shaped the Grand Canyon"
+20500,2050,0,The gorvenment’s serious finace deficit was a result of excessive reliance on the US dollars
+20600,2060,0,The fossilised remains reveal the shape of prehistoric turtles
+20700,2070,0,Attendees ate the tech expo were eager to try the latest video game consoles
+20800,2080,0,The volcano’s eruption spread smoke and ash throughout the entire region
+20900,2090,0,"many telecommunications companies charge their customers for hidden services"""
+20910,2091,0,The charge for a week-long tourist transit pass is $35
+21000,2100,0,"Even if the amount is really small, artificial ingredients in laundry detergent could cause skin irritation"
+21100,2110,0,TempExample_21100
+21200,2120,0,TempExample_21200
+21300,2130,0,TempExample_21300
+21400,2140,0,TempExample_21400
+21500,2150,0,TempExample_21500
+21600,2160,0,TempExample_21600
+21700,2170,0,TempExample_21700
+21800,2180,0,TempExample_21800
+21900,2190,0,TempExample_21900
+22000,2200,0,TempExample_22000
+22100,2210,0,TempExample_22100
+22200,2220,0,TempExample_22200
+22300,2230,0,TempExample_22300
+22400,2240,0,TempExample_22400
+22500,2250,0,TempExample_22500
+22600,2260,0,TempExample_22600
+22700,2270,0,TempExample_22700
+22800,2280,0,TempExample_22800
+22900,2290,0,TempExample_22900
+23000,2300,0,TempExample_23000
+23100,2310,0,TempExample_23100
+23200,2320,0,TempExample_23200
+23300,2330,0,TempExample_23300
+23400,2340,0,TempExample_23400
+23500,2350,0,TempExample_23500
+23600,2360,0,TempExample_23600
+23700,2370,0,TempExample_23700
+23800,2380,0,TempExample_23800
+23900,2390,0,TempExample_23900
+24000,2400,0,TempExample_24000
+24100,2410,0,The periodicals in the library’s archives date back to the late 19th century.
+24200,2420,0,A balanced and healthy ecosystem largely depends on the intricate relationship between plants and insects.
+24300,2430,0,Hamsters can flatten their bodies ro pass through a tiny hole.
+24400,2440,0,Many diet plans are dropped altogether when individuals do not see immediate results.
+24500,2450,0,The boys who were trapped inside the tunnel were finally freed after a 15-hour rescue operation.
+24510,2451,0,Some species of spider are able to construct instricate traps in order to make their prey immobile
+24600,2460,0,Falling from great heights is an occupational hazard that many construction workers face on a daily basis.
+24700,2470,0,Social media users coined hundreds of new words last year.
+24800,2480,0,"Social work is a mentally and emotionally demanding field, but it is highly rewarding."
+24900,2490,0,The canal’s construction may have been abandoned if the engineers had not come up with the remarkable solution.
+25000,2500,0,"In 1936, Francisco Franco began the civil war in an effort to seize control of the Spanish gorvenment."
+25100,2510,0,The new waste disposal regulations are first part of the cityi’s environment initiative.
+25200,2520,0,It is beneficial to both a company and its staff that performance appraisals are routinely carried out.
+25300,2530,0,"Areas rich in coal and other natural resources used to be exploited by powerfull corporations."""
+25400,2540,0,"To protect the marine environment, safer methods of extracting oil from the ocean floor will need to be developed."
+25500,2550,0,Migraines are a chronic illness that afflict approximately one in eight people in U.S.
+25600,2560,0,"Wasabia japonica, or Japanese horseradish, grows best in damp soil protected by shade."
+25700,2570,0,TempExample_25700
+25710,2571,0,Government officials figured that the recession would come to an end within the next six months.
+25800,2580,0,The level of special education provision is increasing as national initiatives have been aggressively undertaken.
+25900,2590,0,The British Empire colonised approximately a quater of the territories in the world.
+26000,2600,0,"Most people opt for safe, low-earning investiment plans to avoid the finalcial hazards of more rewarding ones."
+26100,2610,0,Wireless technologies allow us to transmit images and documents to each other no matter where we are.
+26200,2620,0,"In today’s complex and global market, consumers are generally unaware that their purchases entail ethical dilemmas such as labour exploitation."
+26300,2630,0,TempExample_26300
+26310,2631,0,The divers failed ro locate the crashed airplane’s data recording device.
+26400,2640,0,Agriculture in the pase was completely reliant on wather.
+26500,2650,0,The president’s plan to fully convert the country to clean energy was endorsed by the ten largest corporations in the nation.
+26600,2660,0,The prosecutor could not provide the court with solid evidence of arson.
+26700,2670,0,The format for a CV and a cover letter should be appropriate for each job position.
+26800,2680,0,All medical records are required to be kept as confidential information.
+26900,2690,0,The specimen was sent to the National Science Centre after the local research group was unable to conclusively identify the strage fish.
+27000,2700,0,Travelers affected by the flight cancellation may choose to stay in a hotel near the airport rather than return.
+27010,2701,0,It is believed that meat from a stressed animal can be rather tough when cooked.
+27100,2710,0,It has become crucial to reconcile one’s work life with one’s family life.
+27200,2720,0,The recreational vehicles that belong to the resort are avilable only to VIP guests.
+27300,2730,0,"If you live in a rural, wooded area, frequently check your outdoor pets for parasites"
+27400,2740,0,The fungal parasite is to blame for the destruction of last season’s crops.
+27500,2750,0,"The migration of out ancestors across the Bering Strait brought the first humans to North America over 20,000 years ago."
+27600,2760,0,Anne Frank’s father’s attempts to run away from Germany were thwarted by strict US immigration polices.
+27700,2770,0,The tsunami that hit the coastal region coincided with a volcanic eruption that took place 23 kilometers from shore.
+27800,2780,0,"The teenagers who grew up in the remote village had no exposure to pop music, social media or reality television."
+27900,2790,0,"The British and Prussians defeated Napoleon at Waterloo, thereby ending the Napoleonic Wars."
+28000,2800,0,The amount of plastics found in the stomachs of large marine creatures was shocking.
+28100,2810,0,The human race has greatly affected the Earth’s climate and atmosphere.
+28200,2820,0,The top horses arrived at the track for the international horse race.
+28300,2830,0,The company’s bankruptcy was inevitable after the huge failure of its latest product.
+28400,2840,0,The device is designed for individuals who only have partial use of their hands.
+28500,2850,0,Most cases of addiction to painkillers start with a legimate prescription from a doctor.
+28600,2860,0,"Universal Studios, a huge amusement park, has been a reliable source of income for residents in the county."
+28700,2870,0,The lawyer needed to prove that the defendant did not make a consciious decision to commit the crime.
+28710,2871,0,Parents were concered about the difficult themes the children’s programme explored.
+28720,2872,0,The mayor plans ro hold a town forum to outline the agricultural proposal as it concerns the entire comminity.
+28730,2873,0,"When preparing for a job interview, concern yourself with your appearance as well."
+28800,2880,0,The changes made to the dress were irreversible.
+28900,2890,0,Many of the artefacts recovered from the pharaoh’s tomb were thought to be priceless.
+29000,2900,0,People in northern regions have different ways of dealing with the feeling of isolation and confinement that accompany the long witers.
+29100,2910,0,Employees attend the lectures but make no attempl to apply what they’ve learnt to their daily tasks.
+29110,2911,0,Some people in the Middle Ages attempted to change different materials into gold.
+29200,2920,0,Reduced nus fares on the weekends should encourage more people to use public transport in the city.
+29300,2930,0,The human body is made up of more than 10 trillion cells.
+29400,2940,0,"When sleeping, blood pressure is lowered and body temparature is dropped slightly."
+29410,2941,0,every candidate running for electron pledges lower taxes.
+29500,2950,0,A triathlon is one of the most challengeing competitions an athlete can enter.
+29600,2960,0,Martin Luther King Jr.spoke with utter conviction of the troubles facing African Americans.
+29700,2970,0,"He was especially successful in winning the votes of low-income, poorly educated citizens."
+29800,2980,0,Eating or drinking before a medical check-up may prevent the tested from obtaining accurate results.
+29900,2990,0,The best room with a stunning ocean view is the one ate the end of the corridor.
+30000,3000,0,The gravitational force of an object is directly related to its mass.
+30010,3001,0,"Some engineers imagine a future where free, clean energy is available to the masses."
+30020,3002,0,The inaccurate schedule of the mass transit system is the most frequent complaint from city residents.
+30100,3010,0,"With the ater temperatures rising, many species of coral age going extinct at alarming rates."
+30200,3020,0,The swimmer followed a particular diet in order to have enough energy to train for eight hours a day.
+30210,3021,0,"Before out tour starts, I would like to go over some of the particulars with all of you."
+30300,3030,0,The flooding of the Nile occurs every year between June and September because of melting snow in the Ehiopian Highlands.
+30400,3040,0,"The plant’s leaves, when boiled, had an effect similar to that of a painkiller, but only to a limited extent."
+30500,3050,0,The amount of traffic in the downtown area is governed to a large extent by whether ot not a game is being held at Oliver Stadium.
+30600,3060,0,The workforce demanded to know the CEO’s reasoning for increasing his own salary while cutting employees’.
+30700,3070,0,The conditions for the experiment closely resembled those of the natural environment.
+30800,3080,0,"At the awards ceremony, the director received recognition for her outstanding contributions to cinema."
+30810,3081,0,"By cleaning forests, draining lakes and removing mountaintops, the mining operation had changed the landscape beyond any recognition."
+30900,3090,0,Adding fresh basil will enhance the flavour of your sauce.
+31000,3100,0,"Conditions in the bankrupt nation were worsened by the famine, which resulted from the poor crop harvest."
+31100,3110,0,The Burj Khalifa in Dubai has more than 160 storeys and is almost 830 metres tall.
+31200,3120,0,"While the original aim was to renovate the old threatre, the owners later decided to demolish it."
+31210,3121,0,The majority of sportswear advertisements are aimed at men and women between the ages of 18 to 35.
+31300,3130,0,Tourists in New Oleans frequently visit the bar because it is one of the best venues for live jazz music in the world.
+31400,3140,0,"Whenever supply of oil begins to exceed global demand, oil prices tend to fluctuate widly."
+31500,3150,0,The band was relatively unknown until they released their rock and roll breakthough that would define their career.
+31600,3160,0,"The job market for recent law graduates has become increasingly competitive, and law firms are offering fewer and fewer jobs."
+31610,3161,0,"To keep the new laptop’s pricing competitive, some compromises had to be made to its processing power."
+31700,3170,0,It is illegal for drivers to text of use their mobile phones whilst driving.
+31800,3180,0,Captain Robert Falcon Scott embarked on a dangerous expedition to the Antarctic Plateau.
+31900,3190,0,"Due to the widespread use of social media, it is easier than ever for individuals to acieve instant fame."
+32000,3200,0,Geographical landmarks were used to plot the dimensions of the new road.
+32010,3201,0,It took the author more than ten years to plot and then write the final two novels in his fantasy saga.
+32020,3202,0,"Every summer, my grandmother would plant a plot of green beans in her backyard."
+32100,3210,0,"Within cities, traffic-related issues are the core of most complaints."
+32200,3220,0,"With the cost of the construction project increasing rapidly, the project manager accepted the need for retrenchment."
+32300,3230,0,Our company achived a dominant position in the market by being the first to focaus on online sales.
+32400,3240,0,The international community has a moral obligation to provide assistance to countries affected by natural disasters.
+32500,3250,0,Travellers seeking the ideal conditions for a relaxing day at the beach should book their flights for December or January.
+32600,3260,0,Voters are largely oblivious to how their government actually works.
+32700,3270,0,"Although it is not shocking by today’s standards, the novel was extremly controversial within the cultural context of its time."
+32800,3280,0,"In some job fields, the academic qualifications of an employee do not matter."
+32810,3281,0,A committee was set up to deal with any financial matters related to the construction project.
+32900,3290,0,The end of the First World War is inextricably linked with the start of the second.
+33000,3300,0,"Recreational fishermen use advanced fishing reels to catch salmon, tuna and other large fish."
+33100,3310,0,"Backpackers frequently express envy towards the apparent simplicity of the locals’s lives, but this sentiment neglects the daily difficulties these men and women face."
+33200,3320,0,"Since reptiles are cold-blooded, you can often find them in the wild sunning themselves on a rock."
+33300,3330,0,"If you don’t use a special wide-angle lens, photographs taken underwater will appear distorted."
+33400,3340,0,The unexpected change in the hurricane’s direction led to widespread panic along the coast.
+33500,3350,0,The new attendance policy succeeded in reducing lateness and overuse of personal leave.
+33510,3351,0,Mr Taylor succeeded his father as CEO of Eastland Industries.
+33600,3360,0,The harsh and horrible sound effects in the scene seemed to frighten even adults.
+33700,3370,0,"There are marked differences in slope difficulties, clearly indicated by different colours and shapes at the ski resort."
+33800,3380,0,Aa professional handyman was hired to ensure that the new water purification system would be properly installed and maintained.
+33900,3390,0,The  revelation that the Earth orbits the sun was disputed by many sholars and religious leaders of the time.
+34000,3400,0,"After the announcement that the company would be down sizing, there was a sense of anxiety prevailing across all offices."
+34100,3410,0,The central feature of the architect’s most famous house was the peaceful waterful that ran underneath it.
+34110,3411,0,The film featured a wide cast of unique characters who all contributed to the exciting plot.
+34200,3420,0,The Stevensons took out a large loan from the bank in order to start therir bakery.
+34300,3430,0,Many university students take advantage of free Wi-Fi sevices at cafes and libraries to avoid the high monthly fees of home internet services.
+34400,3440,0,The idea for the poem originated from the author's experiences during World War I.
+34500,3450,0,The team commanded a lead as it entered the final stage of the race.
+34600,3460,0,The new fibre is extremely flexible and could have multiple uses in construction.
+34700,3470,0,Qualified accountant will be assigned to your business to review any possible miscalculations in your taxes.
+34800,3480,0,The bank statements provided concrete evidence that Mr Turner had accepted bribes while he was president of the football league.
+34810,3481,0,First massive concrete columns were built across the river to provide support for the bridge.
+34900,3490,0,A key trait of a capable negotiator is his or her willingness to compromise.
+34910,3491,0,The students’ poor behaviour at the seminar compromised the good reputation of the university.
+35000,3500,0,A lack of fiber in one’s diet can lead to serious digestive issues.
+35010,3501,0,The education reform did not pass because it lacked support from conservative voters.
+35100,3510,0,Astoni Guadi’s love of natre had a considerable influence on his architecture.
+35200,3520,0,Nuclear weapons are reffered to as a threat to the entire human race.
+35300,3530,0,Sea captains need to obey international regualtions during navigation.
+35400,3540,0,"Whithin a few years, robots will possess lifelike human characteristics and be employed in several hospitality industries."
+35500,3550,0,The amazing rescue at Dunkirk was done by oridnary people acting  bravely in extraordinary times.
+35600,3560,0,Customers are offered incentives to encourage prompt payment of monthly utility bills.
+35610,3561,0,The rising number of road accidents prompted the government to reduce the speed limit on highways.
+35620,3562,0,some stage actors require a prompt from the director when they forget their lines.
+35700,3570,0,The electronics company was accused of exploiting its factory workers.
+35800,3580,0,the economic crash resulted in an invasion of young adults into the army.
+35900,3590,0,"With some exceptions, people have the right to refuse medical treatment."
+36000,3600,0,Activities will not commence until after lunch so that quests have time to get settled into their rooms.
+36100,3610,0,TempExample_36100
+36200,3620,0,TempExample_36200
+36300,3630,0,TempExample_36300
+36400,3640,0,TempExample_36400
+36500,3650,0,TempExample_36500
+36600,3660,0,TempExample_36600
+36700,3670,0,TempExample_36700
+36800,3680,0,TempExample_36800
+36900,3690,0,TempExample_36900
+37000,3700,0,TempExample_37000
+37100,3710,0,TempExample_37100
+37200,3720,0,TempExample_37200
+37300,3730,0,TempExample_37300
+37400,3740,0,TempExample_37400
+37500,3750,0,TempExample_37500
+37600,3760,0,TempExample_37600
+37700,3770,0,TempExample_37700
+37800,3780,0,TempExample_37800
+37900,3790,0,TempExample_37900
+38000,3800,0,TempExample_38000
+38100,3810,0,TempExample_38100
+38200,3820,0,TempExample_38200
+38300,3830,0,TempExample_38300
+38400,3840,0,TempExample_38400
+38500,3850,0,TempExample_38500
+38600,3860,0,TempExample_38600
+38700,3870,0,TempExample_38700
+38800,3880,0,TempExample_38800
+38900,3890,0,TempExample_38900
+39000,3900,0,TempExample_39000
+39100,3910,0,TempExample_39100
+39200,3920,0,TempExample_39200
+39300,3930,0,TempExample_39300
+39400,3940,0,TempExample_39400
+39500,3950,0,TempExample_39500
+39600,3960,0,TempExample_39600
+39700,3970,0,TempExample_39700
+39800,3980,0,TempExample_39800
+39900,3990,0,TempExample_39900
+40000,4000,0,TempExample_40000
+40100,4010,0,TempExample_40100
+40200,4020,0,TempExample_40200
+40300,4030,0,TempExample_40300
+40400,4040,0,TempExample_40400
+40500,4050,0,TempExample_40500
+40600,4060,0,TempExample_40600
+40700,4070,0,TempExample_40700
+40800,4080,0,TempExample_40800
+40900,4090,0,TempExample_40900
+41000,4100,0,TempExample_41000
+41100,4110,0,TempExample_41100
+41200,4120,0,TempExample_41200
+41300,4130,0,TempExample_41300
+41400,4140,0,TempExample_41400
+41500,4150,0,TempExample_41500
+41600,4160,0,TempExample_41600
+41700,4170,0,TempExample_41700
+41800,4180,0,TempExample_41800
+41900,4190,0,TempExample_41900
+42000,4200,0,TempExample_42000
+42100,4210,0,TempExample_42100
+42200,4220,0,TempExample_42200
+42300,4230,0,TempExample_42300
+42400,4240,0,TempExample_42400
+42500,4250,0,TempExample_42500
+42600,4260,0,TempExample_42600
+42700,4270,0,TempExample_42700
+42800,4280,0,TempExample_42800
+42900,4290,0,TempExample_42900
+43000,4300,0,TempExample_43000
+43100,4310,0,TempExample_43100
+43200,4320,0,TempExample_43200
+43300,4330,0,TempExample_43300
+43400,4340,0,TempExample_43400
+43500,4350,0,TempExample_43500
+43600,4360,0,TempExample_43600
+43700,4370,0,TempExample_43700
+43800,4380,0,TempExample_43800
+43900,4390,0,TempExample_43900
+44000,4400,0,TempExample_44000
+44100,4410,0,TempExample_44100
+44200,4420,0,TempExample_44200
+44300,4430,0,TempExample_44300
+44400,4440,0,TempExample_44400
+44500,4450,0,TempExample_44500
+44600,4460,0,TempExample_44600
+44700,4470,0,TempExample_44700
+44800,4480,0,TempExample_44800
+44900,4490,0,TempExample_44900
+45000,4500,0,TempExample_45000
+45100,4510,0,TempExample_45100
+45200,4520,0,TempExample_45200
+45300,4530,0,TempExample_45300
+45400,4540,0,TempExample_45400
+45500,4550,0,TempExample_45500
+45600,4560,0,TempExample_45600
+45700,4570,0,TempExample_45700
+45800,4580,0,TempExample_45800
+45900,4590,0,TempExample_45900
+46000,4600,0,TempExample_46000
+46100,4610,0,TempExample_46100
+46200,4620,0,TempExample_46200
+46300,4630,0,TempExample_46300
+46400,4640,0,TempExample_46400
+46500,4650,0,TempExample_46500
+46600,4660,0,TempExample_46600
+46700,4670,0,TempExample_46700
+46800,4680,0,TempExample_46800
+46900,4690,0,TempExample_46900
+47000,4700,0,TempExample_47000
+47100,4710,0,TempExample_47100
+47200,4720,0,TempExample_47200
+47300,4730,0,TempExample_47300
+47400,4740,0,TempExample_47400
+47500,4750,0,TempExample_47500
+47600,4760,0,TempExample_47600
+47700,4770,0,TempExample_47700
+47800,4780,0,TempExample_47800
+47900,4790,0,TempExample_47900
+48000,4800,0,TempExample_48000
+48100,4810,0,TempExample_48100
+48200,4820,0,TempExample_48200
+48300,4830,0,TempExample_48300
+48400,4840,0,TempExample_48400
+48500,4850,0,TempExample_48500
+48600,4860,0,TempExample_48600
+48700,4870,0,TempExample_48700
+48800,4880,0,TempExample_48800
+48900,4890,0,TempExample_48900
+49000,4900,0,TempExample_49000
+49100,4910,0,TempExample_49100
+49200,4920,0,TempExample_49200
+49300,4930,0,TempExample_49300
+49400,4940,0,TempExample_49400
+49500,4950,0,TempExample_49500
+49600,4960,0,TempExample_49600
+49700,4970,0,TempExample_49700
+49800,4980,0,TempExample_49800
+49900,4990,0,TempExample_49900
+50000,5000,0,TempExample_50000
+50100,5010,0,TempExample_50100
+50200,5020,0,TempExample_50200
+50300,5030,0,TempExample_50300
+50400,5040,0,TempExample_50400
+50500,5050,0,TempExample_50500
+50600,5060,0,TempExample_50600
+50700,5070,0,TempExample_50700
+50800,5080,0,TempExample_50800
+50900,5090,0,TempExample_50900
+51000,5100,0,TempExample_51000
+51100,5110,0,TempExample_51100
+51200,5120,0,TempExample_51200
+51300,5130,0,TempExample_51300
+51400,5140,0,TempExample_51400
+51500,5150,0,TempExample_51500
+51600,5160,0,TempExample_51600
+51700,5170,0,TempExample_51700
+51800,5180,0,TempExample_51800
+51900,5190,0,TempExample_51900
+52000,5200,0,TempExample_52000
+52100,5210,0,TempExample_52100
+52200,5220,0,TempExample_52200
+52300,5230,0,TempExample_52300
+52400,5240,0,TempExample_52400
+52500,5250,0,TempExample_52500
+52600,5260,0,TempExample_52600
+52700,5270,0,TempExample_52700
+52800,5280,0,TempExample_52800
+52900,5290,0,TempExample_52900
+53000,5300,0,TempExample_53000
+53100,5310,0,TempExample_53100
+53200,5320,0,TempExample_53200
+53300,5330,0,TempExample_53300
+53400,5340,0,TempExample_53400
+53500,5350,0,TempExample_53500
+53600,5360,0,TempExample_53600
+53700,5370,0,TempExample_53700
+53800,5380,0,TempExample_53800
+53900,5390,0,TempExample_53900
+54000,5400,0,TempExample_54000
+54100,5410,0,TempExample_54100
+54200,5420,0,TempExample_54200
+54300,5430,0,TempExample_54300
+54400,5440,0,TempExample_54400
+54500,5450,0,TempExample_54500
+54600,5460,0,TempExample_54600
+54700,5470,0,TempExample_54700
+54800,5480,0,TempExample_54800
+54900,5490,0,TempExample_54900
+55000,5500,0,TempExample_55000
+55100,5510,0,TempExample_55100
+55200,5520,0,TempExample_55200
+55300,5530,0,TempExample_55300
+55400,5540,0,TempExample_55400
+55500,5550,0,TempExample_55500
+55600,5560,0,TempExample_55600
+55700,5570,0,TempExample_55700
+55800,5580,0,TempExample_55800
+55900,5590,0,TempExample_55900
+56000,5600,0,TempExample_56000
+56100,5610,0,TempExample_56100
+56200,5620,0,TempExample_56200
+56300,5630,0,TempExample_56300
+56400,5640,0,TempExample_56400
+56500,5650,0,TempExample_56500
+56600,5660,0,TempExample_56600
+56700,5670,0,TempExample_56700
+56800,5680,0,TempExample_56800
+56900,5690,0,TempExample_56900
+57000,5700,0,TempExample_57000
+57100,5710,0,TempExample_57100
+57200,5720,0,TempExample_57200
+57300,5730,0,TempExample_57300
+57400,5740,0,TempExample_57400
+57500,5750,0,TempExample_57500
+57600,5760,0,TempExample_57600
+57700,5770,0,TempExample_57700
+57800,5780,0,TempExample_57800
+57900,5790,0,TempExample_57900
+58000,5800,0,TempExample_58000
+58100,5810,0,TempExample_58100
+58200,5820,0,TempExample_58200
+58300,5830,0,TempExample_58300
+58400,5840,0,TempExample_58400
+58500,5850,0,TempExample_58500
+58600,5860,0,TempExample_58600
+58700,5870,0,TempExample_58700
+58800,5880,0,TempExample_58800
+58900,5890,0,TempExample_58900
+59000,5900,0,TempExample_59000
+59100,5910,0,TempExample_59100
+59200,5920,0,TempExample_59200
+59300,5930,0,TempExample_59300
+59400,5940,0,TempExample_59400
+59500,5950,0,TempExample_59500
+59600,5960,0,TempExample_59600
+59700,5970,0,TempExample_59700
+59800,5980,0,TempExample_59800
+59900,5990,0,TempExample_59900
+60000,6000,0,TempExample_60000

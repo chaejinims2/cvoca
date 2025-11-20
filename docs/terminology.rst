@@ -1,0 +1,1 @@
+품사는 영어로 **"part of speech"**라고 합니다. 이는 문장에서 사용되는 단어들을 기능에 따라 나눈 문법적 분류로, 명사(noun), 대명사(pronoun), 동사(verb), 형용사(adjective), 부사(adverb), 접속사(conjunction), 전치사(preposition), 감탄사(interjection) 등이 포함

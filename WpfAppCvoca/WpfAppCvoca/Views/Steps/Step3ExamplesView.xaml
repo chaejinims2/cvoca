@@ -1,0 +1,9 @@
+<UserControl x:Class="WpfAppCvoca.Views.Steps.Step3ExamplesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <TextBlock Text="Step 3: Examples and Translations 화면 (예문/해석 입력/채점 UI)"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                   Foreground="Gray" TextWrapping="Wrap" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,39 @@
+word_id,word,part_of_speech,definition,sense_no,definition_id
+361,authentic,a,"정통의, 진품인",0,3610
+362,carved,a,"조각된, 새겨진",0,3620
+363,relate,v,"관련되어있다",0,3630
+364,rodent,n,"설치류",0,3640
+365,alter,v,"바꾸다",0,3650
+366,individual,a,"각각의",0,3660
+366,individual,a,"개인의",1,3661
+367,outrageous,a,"너무나도 별난, 충격적인",0,3670
+368,intensive,a,"집중적인",0,3680
+369,occupy,v,"차지하다",0,3690
+369,occupy,v,"~를 바쁘게 하다",1,3691
+370,probable,a,"가능한",0,3700
+371,fertile,a,"비옥한",0,3710
+372,apprentice,n,"수습사원",0,3720
+373,significant,a,"중요한, 상당한",0,3730
+374,settle,v,"정착하다",0,3740
+374,settle,v,"해결결하다",1,3741
+374,settle,v,"지불하다",2,3742
+375,mundane,a,"일상적인",0,3750
+376,appointment,n,"예약, 약속",0,3760
+376,appointment,n,"임명, 발령",1,3761
+377,largely,ad,"주로, 크게",0,3770
+378,revise,v,"수정하다, 변경하다",0,3780
+379,catastrophic,a,"최악의, 큰 재앙의",0,3790
+380,afraid,a,"걱정하는, 두려워하는",0,3800
+381,plough,n,"쟁기",0,3810
+381,plough,v,"(어려움이 있어도) 계속하다",1,3811
+382,substance,n,"물질, 실체",0,3820
+383,drought,n,"가뭄",0,3830
+384,insular,a,"섬의, 섬 근처의",0,3840
+385,consistent,a,"일관된, 일정한",0,3850
+385,consistent,a,"일치하는",1,3851
+386,profitable,a,"수익성이 좋은",0,3860
+387,depiction,n,"묘사, 묘사법",0,3870
+388,incongruity,n,"불일치, 불일치성",0,3880
+389,distressing,a,"괴로움을 주는, 비참한한",0,3890
+390,strand,v,"오도가지도 못하게 하다",0,3900
+390,strand,n,"가닥, 분야",1,3901

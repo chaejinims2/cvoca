@@ -1,0 +1,1 @@
+python script/create_day_csv.py 15 data/ielts_voca_20_30/user/words data/words.csv

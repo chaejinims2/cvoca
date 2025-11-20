@@ -1,0 +1,650 @@
+word_id,sense_no,definition_id,definition,part_of_speech
+1,0,10,"피하다, 막다",v
+2,0,20,"즉각적인, 직접적인",a
+3,0,30,"진가를 인정하다, 감사해하다",v
+3,1,31,상황이나 문제점을 완전히 인식하다,v
+4,0,40,"일행, 무리, 정당",n
+5,0,50,"~관하여, ~관한",null
+6,0,60,해를 끼치다,v
+6,1,61,"피해, 손해",n
+7,0,70,"목적, 목표",n
+7,1,71,객관적인,a
+8,0,80,포유 동물,n
+9,0,90,잠재적으로 대단히 중요한,a
+10,0,100,"귀한, 값 비싼",a
+11,0,110,장애물,n
+12,0,120,"의뢰, 위탁된 일을 맡은",n
+13,0,130,해결하다,v
+14,0,140,감추다 숨기다,v
+15,0,150,"갈등, 충돌",n
+16,0,160,모으다,v
+17,0,170,가축,n
+18,0,180,"고도의, 상급의, 선진의",a
+19,0,190,열을 올리고 있는,a
+20,0,200,버려진,a
+21,0,210,유발하다,v
+22,0,220,"주의, 주목, 관심",n
+23,0,230,양보,n
+23,1,231,할인,n
+24,0,240,"나중을 위해 치워두다, 따로두다",v
+25,0,250,대체하다,v
+26,0,260,"~해야하다, ~을 할 의무가 있다",v
+27,0,270,"질문, 문의",n
+28,0,280,"계획, 제도",n
+29,0,290,요새,n
+30,0,300,기막히게 멋진,a
+31,0,310,TempDefinition_31,null
+32,0,320,TempDefinition_32,null
+33,0,330,TempDefinition_33,null
+34,0,340,TempDefinition_34,null
+35,0,350,TempDefinition_35,null
+36,0,360,TempDefinition_36,null
+37,0,370,TempDefinition_37,null
+38,0,380,TempDefinition_38,null
+39,0,390,TempDefinition_39,null
+40,0,400,TempDefinition_40,null
+41,0,410,TempDefinition_41,null
+42,0,420,TempDefinition_42,null
+43,0,430,TempDefinition_43,null
+44,0,440,TempDefinition_44,null
+45,0,450,TempDefinition_45,null
+46,0,460,TempDefinition_46,null
+47,0,470,TempDefinition_47,null
+48,0,480,TempDefinition_48,null
+49,0,490,TempDefinition_49,null
+50,0,500,TempDefinition_50,null
+51,0,510,TempDefinition_51,null
+52,0,520,TempDefinition_52,null
+53,0,530,TempDefinition_53,null
+54,0,540,TempDefinition_54,null
+55,0,550,TempDefinition_55,null
+56,0,560,TempDefinition_56,null
+57,0,570,TempDefinition_57,null
+58,0,580,TempDefinition_58,null
+59,0,590,TempDefinition_59,null
+60,0,600,TempDefinition_60,null
+61,0,610,TempDefinition_61,null
+62,0,620,TempDefinition_62,null
+63,0,630,TempDefinition_63,null
+64,0,640,TempDefinition_64,null
+65,0,650,TempDefinition_65,null
+66,0,660,TempDefinition_66,null
+67,0,670,TempDefinition_67,null
+68,0,680,TempDefinition_68,null
+69,0,690,TempDefinition_69,null
+70,0,700,TempDefinition_70,null
+71,0,710,TempDefinition_71,null
+72,0,720,TempDefinition_72,null
+73,0,730,TempDefinition_73,null
+74,0,740,TempDefinition_74,null
+75,0,750,TempDefinition_75,null
+76,0,760,TempDefinition_76,null
+77,0,770,TempDefinition_77,null
+78,0,780,TempDefinition_78,null
+79,0,790,TempDefinition_79,null
+80,0,800,TempDefinition_80,null
+81,0,810,TempDefinition_81,null
+82,0,820,TempDefinition_82,null
+83,0,830,TempDefinition_83,null
+84,0,840,TempDefinition_84,null
+85,0,850,TempDefinition_85,null
+86,0,860,TempDefinition_86,null
+87,0,870,TempDefinition_87,null
+88,0,880,TempDefinition_88,null
+89,0,890,TempDefinition_89,null
+90,0,900,TempDefinition_90,null
+91,0,910,TempDefinition_91,null
+92,0,920,TempDefinition_92,null
+93,0,930,TempDefinition_93,null
+94,0,940,TempDefinition_94,null
+95,0,950,TempDefinition_95,null
+96,0,960,TempDefinition_96,null
+97,0,970,TempDefinition_97,null
+98,0,980,TempDefinition_98,null
+99,0,990,TempDefinition_99,null
+100,0,1000,TempDefinition_100,null
+101,0,1010,TempDefinition_101,null
+102,0,1020,TempDefinition_102,null
+103,0,1030,TempDefinition_103,null
+104,0,1040,TempDefinition_104,null
+105,0,1050,TempDefinition_105,null
+106,0,1060,TempDefinition_106,null
+107,0,1070,TempDefinition_107,null
+108,0,1080,TempDefinition_108,null
+109,0,1090,TempDefinition_109,null
+110,0,1100,TempDefinition_110,null
+111,0,1110,TempDefinition_111,null
+112,0,1120,TempDefinition_112,null
+113,0,1130,TempDefinition_113,null
+114,0,1140,TempDefinition_114,null
+115,0,1150,TempDefinition_115,null
+116,0,1160,TempDefinition_116,null
+117,0,1170,TempDefinition_117,null
+118,0,1180,TempDefinition_118,null
+119,0,1190,TempDefinition_119,null
+120,0,1200,TempDefinition_120,null
+121,0,1210,TempDefinition_121,null
+122,0,1220,TempDefinition_122,null
+123,0,1230,TempDefinition_123,null
+124,0,1240,TempDefinition_124,null
+125,0,1250,TempDefinition_125,null
+126,0,1260,TempDefinition_126,null
+127,0,1270,TempDefinition_127,null
+128,0,1280,TempDefinition_128,null
+129,0,1290,TempDefinition_129,null
+130,0,1300,TempDefinition_130,null
+131,0,1310,TempDefinition_131,null
+132,0,1320,TempDefinition_132,null
+133,0,1330,TempDefinition_133,null
+134,0,1340,TempDefinition_134,null
+135,0,1350,TempDefinition_135,null
+136,0,1360,TempDefinition_136,null
+137,0,1370,TempDefinition_137,null
+138,0,1380,TempDefinition_138,null
+139,0,1390,TempDefinition_139,null
+140,0,1400,TempDefinition_140,null
+141,0,1410,TempDefinition_141,null
+142,0,1420,TempDefinition_142,null
+143,0,1430,TempDefinition_143,null
+144,0,1440,TempDefinition_144,null
+145,0,1450,TempDefinition_145,null
+146,0,1460,TempDefinition_146,null
+147,0,1470,TempDefinition_147,null
+148,0,1480,TempDefinition_148,null
+149,0,1490,TempDefinition_149,null
+150,0,1500,TempDefinition_150,null
+151,0,1510,"드러내다, 드러나다",v
+152,0,1520,"이익, 수당",n
+152,1,1521,도움이 되다,v
+153,0,1530,당황하게 하다,v
+154,0,1540,"떼, 무리, 사람들",n
+155,0,1550,"시민의, 문명의",a
+156,0,1560,중단,n
+156,1,1561,중단 시키다,v
+157,0,1570,"얻다, 획득하다",null
+158,0,1580,"사육, 번식",n
+159,0,1590,"~을 제외하고, ~뿐만 아니라",null
+160,0,1600,확보하다,v
+160,1,1601,안심하는,v
+161,0,1610,장애를 가진,a
+162,0,1620,(사회에서) 소외하다,v
+163,0,1630,영향을 미치다,v
+164,0,1640,포함하다,v
+164,1,1641,참여시키다,v
+164,2,1642,열중 시키다,v
+165,0,1650,액체가 빠지다,v
+165,1,1651,소모하다,v
+166,0,1660,엄청난,a
+167,0,1670,"분명한, 명백한",null
+168,0,1680,관개,n
+169,0,1690,과장하다,v
+170,0,1700,안정적으로,a
+171,0,1710,경작,n
+172,0,1720,녹다,v
+173,0,1730,"모방하다, 흉내내다",null
+174,0,1740,먹을 수 있는,a
+175,0,1750,경고하다,null
+175,1,1751,"알리다, 알림",v
+176,0,1760,"먹이를 주다, 공급하다",v
+177,0,1770,"수단, 방법",n
+178,0,1780,"침입, 방해",null
+179,0,1790,속이 비어 있는,a
+180,0,1800,"분배, 유통",null
+181,0,1810,거의 ~ 않는,null
+182,0,1820,돕다,null
+182,1,1821,돕다,null
+183,0,1830,유지하다,null
+184,0,1840,"처음의, 최초의",null
+185,0,1850,정확한,null
+186,0,1860,관통하다,v
+186,1,1861,"간파하다, 이해하다",v
+187,0,1870,유연한,null
+188,0,1880,"준비, 주선",null
+189,0,1890,"선천적으로, 본질적으로",null
+190,0,1900,관계의 소원,null
+191,0,1910,"심각하게, 진지하게",null
+192,0,1920,공식적인,a
+192,1,1921,"공무원, 관리",n
+193,0,1930,"고립된, 외딴",a
+194,0,1940,받아들이다,null
+195,0,1950,"환호하다, 칭송하다, 인정하다",v
+195,1,1951,"찬사, 인정",n
+196,0,1960,과소평가하다,v
+197,0,1970,"거주중인, 살고 있는",a
+198,0,1980,"좌우되는, 의존적인",a
+199,0,1990,"분출, 화산의 폭발",n
+200,0,2000,"거의, 사실상",ad
+201,0,2010,"심각한, 극심한",null
+202,0,2020,최대 수용량,n
+203,0,2030,수직의,null
+204,0,2040,침식,n
+205,0,2050,"부족, 결함, 적자",null
+206,0,2060,"남은것, 유적, 유해, 유물",n
+207,0,2070,"열렬한, 열망하는",null
+208,0,2080,전체의,null
+209,0,2090,"요금을 청구하다,To increase monthly bills",v
+209,1,2091,요금,n
+210,0,2100,"피부 자극, 짜증",n
+211,0,2110,TempDefinition_211,null
+212,0,2120,TempDefinition_212,null
+213,0,2130,TempDefinition_213,null
+214,0,2140,TempDefinition_214,null
+215,0,2150,TempDefinition_215,null
+216,0,2160,TempDefinition_216,null
+217,0,2170,TempDefinition_217,null
+218,0,2180,TempDefinition_218,null
+219,0,2190,TempDefinition_219,null
+220,0,2200,TempDefinition_220,null
+221,0,2210,TempDefinition_221,null
+222,0,2220,TempDefinition_222,null
+223,0,2230,TempDefinition_223,null
+224,0,2240,TempDefinition_224,null
+225,0,2250,TempDefinition_225,null
+226,0,2260,TempDefinition_226,null
+227,0,2270,TempDefinition_227,null
+228,0,2280,TempDefinition_228,null
+229,0,2290,TempDefinition_229,null
+230,0,2300,TempDefinition_230,null
+231,0,2310,TempDefinition_231,null
+232,0,2320,TempDefinition_232,null
+233,0,2330,TempDefinition_233,null
+234,0,2340,TempDefinition_234,null
+235,0,2350,TempDefinition_235,null
+236,0,2360,TempDefinition_236,null
+237,0,2370,TempDefinition_237,null
+238,0,2380,TempDefinition_238,null
+239,0,2390,TempDefinition_239,null
+240,0,2400,TempDefinition_240,null
+241,0,2410,정기 간행물,null
+242,0,2420,(정교하게) 복잡한,null
+243,0,2430,납작하게 만들다.,null
+244,0,2440,"완전히, 전부",null
+245,0,2450,"가두다, 몰아넣다",v
+245,1,2451,"덫, 함정",n
+246,0,2460,"직업의, 직업과 관련된",null
+247,0,2470,(새로운) 말을 만들다.,null
+248,0,2480,"요구가 많은, 힘든",null
+249,0,2490,"놀랄 만한, 주목할 만한",a
+250,0,2500,"붙잡다, 장악하다",v
+251,0,2510,"계획, 사업",n
+252,0,2520,평가,n
+253,0,2530,"착취하다, (부당하게) 이용하다, 개발하다",null
+254,0,2540,추출하다,null
+255,0,2550,"괴롭히다, 시달리다",null
+256,0,2560,축축한,null
+257,0,2570,수치,n
+257,1,2571,~일 것이라고 생각하다,v
+258,0,2580,"제공, 공급품",n
+259,0,2590,식민지로 만들다,v
+260,0,2600,위험,n
+261,0,2610,"전송하다, 전염시키다",null
+262,0,2620,(필수로)수반하다,v
+263,0,2630,(위치에) 두다,null
+263,1,2631,(정확한 위치를) 찾아내다,v
+264,0,2640,농업,n
+265,0,2650,"지지하다, 승인하다",null
+266,0,2660,증거,null
+267,0,2670,적절한,null
+268,0,2680,기밀의,null
+269,0,2690,"결정적으로, 확실하게",null
+270,0,2700,"대신에, 오히려",ad
+270,1,2701,꽤,ad
+271,0,2710,조화시키다,v
+272,0,2720,속해있다,v
+273,0,2730,기생물,n
+274,0,2740,"책임을 지우다, 비난하다",v
+275,0,2750,"이주, 이민",n
+276,0,2760,좌절시키다,v
+277,0,2770,"동시에 일어나다, 일치하다",v
+278,0,2780,노출,n
+279,0,2790,"그렇게 함으로써, 그로인해",ad
+280,0,2800,생물,n
+281,0,2810,"종, 인종, 민족",n
+282,0,2820,경주,n
+283,0,2830,불가피한,a
+284,0,2840,"고안된, 설계된",a
+285,0,2850,"합법적인, 정당한",a
+286,0,2860,"신뢰할 수 있는, 확실한",a
+287,0,2870,"의도적인, 자각하고 있는",a
+287,1,2871,우려하다,v
+287,2,2872,"관련되다, 관련되어있다",v
+287,3,2873,"관심있다, 중시하다",v
+288,0,2880,되돌릴 수 없는,a
+289,0,2890,유물,n
+290,0,2900,감금,n
+291,0,2910,시도,n
+291,1,2911,시도하다,v
+292,0,2920,"장려하다, 촉진하다",v
+293,0,2930,세포,n
+294,0,2940,낮추다,v
+294,1,2941,더 낮은,a
+295,0,2950,"도전적인, 힘든",a
+296,0,2960,"확신, 신념",n
+297,0,2970,교육을 받은,a
+298,0,2980,정확한,a
+299,0,2990,"복도, 통로",n
+300,0,3000,"덩어리, 질량",n
+300,1,3001,대중,n
+300,2,3002,"대량의, 대중의",a
+301,0,3010,"멸종된, 사라진",null
+302,0,3020,"특정한, 특별한",null
+302,1,3021,"상세, 자세한 사실",null
+303,0,3030,"일어나다, 발생하다",null
+304,0,3040,"정도, 규모",null
+305,0,3050,"좌우하다, 운영하다",null
+306,0,3060,"추론, 논리, 이유",null
+307,0,3070,유사하다,null
+308,0,3080,인정,null
+308,1,3081,"인식, 알아 봄",null
+309,0,3090,"높이다, 향상시키다",null
+310,0,3100,"기근, 굶주림",null
+311,0,3110,(건물의) 층,null
+312,0,3120,목표,null
+312,1,3121,"목표로 하다, 대상으로 하다",null
+313,0,3130,장소,null
+314,0,3140,초과하다,null
+315,0,3150,"돌파구, (획기적인) 발전",null
+316,0,3160,경쟁을 하는,null
+316,1,3161,"경쟁력 있는, (가성비에서)뒤지지 않는",null
+317,0,3170,~하는 동안,null
+318,0,3180,"시작하다, 착수하다",null
+319,0,3190,"해내다, 이루다",null
+320,0,3200,표시하다,null
+320,1,3201,줄거리를 구상하다,null
+320,2,3202,"(작은 구획의) 땅, 토지",null
+321,0,3210,핵심,null
+322,0,3220,"긴축, 경비 절감",null
+323,0,3230,"우세한, 지배적인",null
+324,0,3240,의무,null
+325,0,3250,"가장 알맞은, 이상적인",null
+326,0,3260,의식하지 못하는,null
+327,0,3270,"맥락, 정황, 배경",null
+328,0,3280,중요하다,null
+328,1,3281,(처리해야 할)문제,null
+329,0,3290,불가분하게,null
+330,0,3300,"(필름이나 실, 전성 등을 감는 원통형의) 릴, 실패",null
+331,0,3310,부러움,n
+332,0,3320,파충류,n
+333,0,3330,왜곡된,a
+334,0,3340,널리 퍼진,a
+335,0,3350,"성공하다, 해내다",v
+335,1,3351,성공,n
+336,0,3360,겁을 주다,v
+337,0,3370,"뚜렷한, 표시되어 있는",a
+338,0,3380,적절하게,adv
+339,0,3390,"폭로, 드러냄",n
+340,0,3400,"(특정시기에) 우세한, 지배적인",a
+341,0,3410,특징,n
+341,1,3411,특징,n
+342,0,3420,대출,n
+343,0,3430,피하다,v
+344,0,3440,기인하다,v
+345,0,3450,차지하다,v
+346,0,3460,"대단히, 극도로",adv
+347,0,3470,자격이 있는,a
+348,0,3480,구체적인,a
+348,1,3481,콘크리트,n
+349,0,3490,타협하다,v
+349,1,3491,하다,v
+350,0,3500,"부족, 결핍",n
+350,1,3501,부족하다,v
+351,0,3510,상당한,a
+352,0,3520,"언급하다, 연관되다",v
+353,0,3530,"복종하다, 따르다",v
+354,0,3540,소유하다,v
+355,0,3550,"보통의, 일상적인",a
+356,0,3560,즉각적인,a
+356,1,3561,(행동을) 촉발하다,v
+356,2,3562,(대사를 일러주는 말),n
+357,0,3570,비난하다,v
+358,0,3580,"침략, 쇄도",n
+359,0,3590,"거부하다, 거절하다",v
+360,0,3600,~하도록,null
+361,0,3610,"정통의, 진품인",a
+362,0,3620,"조각된, 새겨진",a
+363,0,3630,관련되어있다,v
+364,0,3640,설치류,n
+365,0,3650,바꾸다,v
+366,0,3660,각각의,a
+366,1,3661,개인의,a
+367,0,3670,"너무나도 별난, 충격적인",a
+368,0,3680,집중적인,a
+369,0,3690,차지하다,v
+369,1,3691,~를 바쁘게 하다,v
+370,0,3700,가능한,a
+371,0,3710,비옥한,a
+372,0,3720,수습사원,n
+373,0,3730,"중요한, 상당한",a
+374,0,3740,정착하다,v
+374,1,3741,해결결하다,v
+374,2,3742,지불하다,v
+375,0,3750,일상적인,a
+376,0,3760,"예약, 약속",n
+376,1,3761,"임명, 발령",n
+377,0,3770,"주로, 크게",ad
+378,0,3780,"수정하다, 변경하다",v
+379,0,3790,"최악의, 큰 재앙의",a
+380,0,3800,"걱정하는, 두려워하는",a
+381,0,3810,쟁기,n
+381,1,3811,(어려움이 있어도) 계속하다,v
+382,0,3820,"물질, 실체",n
+383,0,3830,가뭄,n
+384,0,3840,"섬의, 섬 근처의",a
+385,0,3850,"일관된, 일정한",a
+385,1,3851,일치하는,a
+386,0,3860,수익성이 좋은,a
+387,0,3870,"묘사, 묘사법",n
+388,0,3880,"불일치, 불일치성",n
+389,0,3890,"괴로움을 주는, 비참한한",a
+390,0,3900,오도가지도 못하게 하다,v
+390,1,3901,"가닥, 분야",n
+391,0,3910,TempDefinition_391,null
+392,0,3920,TempDefinition_392,null
+393,0,3930,TempDefinition_393,null
+394,0,3940,TempDefinition_394,null
+395,0,3950,TempDefinition_395,null
+396,0,3960,TempDefinition_396,null
+397,0,3970,TempDefinition_397,null
+398,0,3980,TempDefinition_398,null
+399,0,3990,TempDefinition_399,null
+400,0,4000,TempDefinition_400,null
+401,0,4010,TempDefinition_401,null
+402,0,4020,TempDefinition_402,null
+403,0,4030,TempDefinition_403,null
+404,0,4040,TempDefinition_404,null
+405,0,4050,TempDefinition_405,null
+406,0,4060,TempDefinition_406,null
+407,0,4070,TempDefinition_407,null
+408,0,4080,TempDefinition_408,null
+409,0,4090,TempDefinition_409,null
+410,0,4100,TempDefinition_410,null
+411,0,4110,TempDefinition_411,null
+412,0,4120,TempDefinition_412,null
+413,0,4130,TempDefinition_413,null
+414,0,4140,TempDefinition_414,null
+415,0,4150,TempDefinition_415,null
+416,0,4160,TempDefinition_416,null
+417,0,4170,TempDefinition_417,null
+418,0,4180,TempDefinition_418,null
+419,0,4190,TempDefinition_419,null
+420,0,4200,TempDefinition_420,null
+421,0,4210,TempDefinition_421,null
+422,0,4220,TempDefinition_422,null
+423,0,4230,TempDefinition_423,null
+424,0,4240,TempDefinition_424,null
+425,0,4250,TempDefinition_425,null
+426,0,4260,TempDefinition_426,null
+427,0,4270,TempDefinition_427,null
+428,0,4280,TempDefinition_428,null
+429,0,4290,TempDefinition_429,null
+430,0,4300,TempDefinition_430,null
+431,0,4310,TempDefinition_431,null
+432,0,4320,TempDefinition_432,null
+433,0,4330,TempDefinition_433,null
+434,0,4340,TempDefinition_434,null
+435,0,4350,TempDefinition_435,null
+436,0,4360,TempDefinition_436,null
+437,0,4370,TempDefinition_437,null
+438,0,4380,TempDefinition_438,null
+439,0,4390,TempDefinition_439,null
+440,0,4400,TempDefinition_440,null
+441,0,4410,TempDefinition_441,null
+442,0,4420,TempDefinition_442,null
+443,0,4430,TempDefinition_443,null
+444,0,4440,TempDefinition_444,null
+445,0,4450,TempDefinition_445,null
+446,0,4460,TempDefinition_446,null
+447,0,4470,TempDefinition_447,null
+448,0,4480,TempDefinition_448,null
+449,0,4490,TempDefinition_449,null
+450,0,4500,TempDefinition_450,null
+451,0,4510,TempDefinition_451,null
+452,0,4520,TempDefinition_452,null
+453,0,4530,TempDefinition_453,null
+454,0,4540,TempDefinition_454,null
+455,0,4550,TempDefinition_455,null
+456,0,4560,TempDefinition_456,null
+457,0,4570,TempDefinition_457,null
+458,0,4580,TempDefinition_458,null
+459,0,4590,TempDefinition_459,null
+460,0,4600,TempDefinition_460,null
+461,0,4610,TempDefinition_461,null
+462,0,4620,TempDefinition_462,null
+463,0,4630,TempDefinition_463,null
+464,0,4640,TempDefinition_464,null
+465,0,4650,TempDefinition_465,null
+466,0,4660,TempDefinition_466,null
+467,0,4670,TempDefinition_467,null
+468,0,4680,TempDefinition_468,null
+469,0,4690,TempDefinition_469,null
+470,0,4700,TempDefinition_470,null
+471,0,4710,TempDefinition_471,null
+472,0,4720,TempDefinition_472,null
+473,0,4730,TempDefinition_473,null
+474,0,4740,TempDefinition_474,null
+475,0,4750,TempDefinition_475,null
+476,0,4760,TempDefinition_476,null
+477,0,4770,TempDefinition_477,null
+478,0,4780,TempDefinition_478,null
+479,0,4790,TempDefinition_479,null
+480,0,4800,TempDefinition_480,null
+481,0,4810,TempDefinition_481,null
+482,0,4820,TempDefinition_482,null
+483,0,4830,TempDefinition_483,null
+484,0,4840,TempDefinition_484,null
+485,0,4850,TempDefinition_485,null
+486,0,4860,TempDefinition_486,null
+487,0,4870,TempDefinition_487,null
+488,0,4880,TempDefinition_488,null
+489,0,4890,TempDefinition_489,null
+490,0,4900,TempDefinition_490,null
+491,0,4910,TempDefinition_491,null
+492,0,4920,TempDefinition_492,null
+493,0,4930,TempDefinition_493,null
+494,0,4940,TempDefinition_494,null
+495,0,4950,TempDefinition_495,null
+496,0,4960,TempDefinition_496,null
+497,0,4970,TempDefinition_497,null
+498,0,4980,TempDefinition_498,null
+499,0,4990,TempDefinition_499,null
+500,0,5000,TempDefinition_500,null
+501,0,5010,TempDefinition_501,null
+502,0,5020,TempDefinition_502,null
+503,0,5030,TempDefinition_503,null
+504,0,5040,TempDefinition_504,null
+505,0,5050,TempDefinition_505,null
+506,0,5060,TempDefinition_506,null
+507,0,5070,TempDefinition_507,null
+508,0,5080,TempDefinition_508,null
+509,0,5090,TempDefinition_509,null
+510,0,5100,TempDefinition_510,null
+511,0,5110,TempDefinition_511,null
+512,0,5120,TempDefinition_512,null
+513,0,5130,TempDefinition_513,null
+514,0,5140,TempDefinition_514,null
+515,0,5150,TempDefinition_515,null
+516,0,5160,TempDefinition_516,null
+517,0,5170,TempDefinition_517,null
+518,0,5180,TempDefinition_518,null
+519,0,5190,TempDefinition_519,null
+520,0,5200,TempDefinition_520,null
+521,0,5210,TempDefinition_521,null
+522,0,5220,TempDefinition_522,null
+523,0,5230,TempDefinition_523,null
+524,0,5240,TempDefinition_524,null
+525,0,5250,TempDefinition_525,null
+526,0,5260,TempDefinition_526,null
+527,0,5270,TempDefinition_527,null
+528,0,5280,TempDefinition_528,null
+529,0,5290,TempDefinition_529,null
+530,0,5300,TempDefinition_530,null
+531,0,5310,TempDefinition_531,null
+532,0,5320,TempDefinition_532,null
+533,0,5330,TempDefinition_533,null
+534,0,5340,TempDefinition_534,null
+535,0,5350,TempDefinition_535,null
+536,0,5360,TempDefinition_536,null
+537,0,5370,TempDefinition_537,null
+538,0,5380,TempDefinition_538,null
+539,0,5390,TempDefinition_539,null
+540,0,5400,TempDefinition_540,null
+541,0,5410,TempDefinition_541,null
+542,0,5420,TempDefinition_542,null
+543,0,5430,TempDefinition_543,null
+544,0,5440,TempDefinition_544,null
+545,0,5450,TempDefinition_545,null
+546,0,5460,TempDefinition_546,null
+547,0,5470,TempDefinition_547,null
+548,0,5480,TempDefinition_548,null
+549,0,5490,TempDefinition_549,null
+550,0,5500,TempDefinition_550,null
+551,0,5510,TempDefinition_551,null
+552,0,5520,TempDefinition_552,null
+553,0,5530,TempDefinition_553,null
+554,0,5540,TempDefinition_554,null
+555,0,5550,TempDefinition_555,null
+556,0,5560,TempDefinition_556,null
+557,0,5570,TempDefinition_557,null
+558,0,5580,TempDefinition_558,null
+559,0,5590,TempDefinition_559,null
+560,0,5600,TempDefinition_560,null
+561,0,5610,TempDefinition_561,null
+562,0,5620,TempDefinition_562,null
+563,0,5630,TempDefinition_563,null
+564,0,5640,TempDefinition_564,null
+565,0,5650,TempDefinition_565,null
+566,0,5660,TempDefinition_566,null
+567,0,5670,TempDefinition_567,null
+568,0,5680,TempDefinition_568,null
+569,0,5690,TempDefinition_569,null
+570,0,5700,TempDefinition_570,null
+571,0,5710,TempDefinition_571,null
+572,0,5720,TempDefinition_572,null
+573,0,5730,TempDefinition_573,null
+574,0,5740,TempDefinition_574,null
+575,0,5750,TempDefinition_575,null
+576,0,5760,TempDefinition_576,null
+577,0,5770,TempDefinition_577,null
+578,0,5780,TempDefinition_578,null
+579,0,5790,TempDefinition_579,null
+580,0,5800,TempDefinition_580,null
+581,0,5810,TempDefinition_581,null
+582,0,5820,TempDefinition_582,null
+583,0,5830,TempDefinition_583,null
+584,0,5840,TempDefinition_584,null
+585,0,5850,TempDefinition_585,null
+586,0,5860,TempDefinition_586,null
+587,0,5870,TempDefinition_587,null
+588,0,5880,TempDefinition_588,null
+589,0,5890,TempDefinition_589,null
+590,0,5900,TempDefinition_590,null
+591,0,5910,TempDefinition_591,null
+592,0,5920,TempDefinition_592,null
+593,0,5930,TempDefinition_593,null
+594,0,5940,TempDefinition_594,null
+595,0,5950,TempDefinition_595,null
+596,0,5960,TempDefinition_596,null
+597,0,5970,TempDefinition_597,null
+598,0,5980,TempDefinition_598,null
+599,0,5990,TempDefinition_599,null
+600,0,6000,TempDefinition_600,null

@@ -1,0 +1,36 @@
+python sort_cols_custom.py data/output/Vocabulary_Meaning_Example.csv day_no VocabularyId Word MeaningId part_of_speech definition DisplayOrder example_id Example Translation
+
+python script/tmp/CustomrenameId.py data/Vocabulary.csv day_no 1 -238
+python script/tmp/CustomrenameId.py data/Vocabulary.csv day_no 2 -30
+python script/tmp/CustomrenameId.py data/Vocabulary.csv day_no 3 -60
+python script/tmp/CustomrenameId.py data/Vocabulary.csv day_no 5 -85
+python script/tmp/CustomrenameId.py data/Vocabulary.csv day_no 6 -118
+python script/tmp/CustomrenameId.py data/Vocabulary.csv day_no 7 -148
+python script/tmp/CustomrenameId.py data/Vocabulary.csv day_no 8 -178
+python script/tmp/CustomrenameId.py data/Vocabulary.csv day_no 9 -208
+python script/tmp/CustomrenameId.py data/Vocabulary.csv day_no 10 0
+python script/tmp/CustomrenameId.py data/Vocabulary.csv day_no 11 -268
+
+python script/tmp/AddRows.py data/Vocabulary.csv day_no 3 5
+python script/tmp/AddRows.py data/Vocabulary.csv day_no 4 30
+python script/tmp/AddRows.py data/Vocabulary.csv day_no 13 30
+python script/tmp/AddRows.py data/Vocabulary.csv day_no 14 30
+python script/tmp/AddRows.py data/Vocabulary.csv day_no 15 30
+python script/tmp/AddRows.py data/Vocabulary.csv day_no 16 30
+python script/tmp/AddRows.py data/Vocabulary.csv day_no 17 30
+python script/tmp/AddRows.py data/Vocabulary.csv day_no 18 30
+python script/tmp/AddRows.py data/Vocabulary.csv day_no 19 30
+python script/tmp/AddRows.py data/Vocabulary.csv day_no 20 30
+
+
+python script/tmp/CustomrenameId.py data/Vocabulary_join_Meaning.csv day_no 1 -238
+python script/tmp/CustomrenameId.py data/Vocabulary_join_Meaning.csv day_no 2 -30
+python script/tmp/CustomrenameId.py data/Vocabulary_join_Meaning.csv day_no 3 -60
+python script/tmp/CustomrenameId.py data/Vocabulary_join_Meaning.csv day_no 5 -85
+python script/tmp/CustomrenameId.py data/Vocabulary_join_Meaning.csv day_no 6 -118
+python script/tmp/CustomrenameId.py data/Vocabulary_join_Meaning.csv day_no 7 -148
+python script/tmp/CustomrenameId.py data/Vocabulary_join_Meaning.csv day_no 8 -178
+python script/tmp/CustomrenameId.py data/Vocabulary_join_Meaning.csv day_no 9 -208
+python script/tmp/CustomrenameId.py data/Vocabulary_join_Meaning.csv day_no 10 0
+python script/tmp/CustomrenameId.py data/Vocabulary_join_Meaning.csv day_no 11 -268
+python script/tmp/CustomrenameId.py data/Vocabulary_join_Meaning.csv day_no 12 -298

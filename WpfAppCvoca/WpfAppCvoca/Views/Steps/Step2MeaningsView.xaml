@@ -1,0 +1,9 @@
+<UserControl x:Class="WpfAppCvoca.Views.Steps.Step2MeaningsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <TextBlock Text="Step 2: Meanings 화면 (단어별 뜻 입력/채점 UI)"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                   Foreground="Gray" TextWrapping="Wrap" />
+    </Grid>
+</UserControl>
