@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
-// using Microsoft.Data.Sqlite;
-using System.Data.SQLite;
+using Microsoft.Data.Sqlite;
 using System.Linq;
 using WpfAppCvoca.Models;
 using WpfAppCvoca.ViewModels;
@@ -32,7 +31,7 @@ namespace WpfAppCvoca.Services
 
             try
             {
-                using (var conn = new SQLiteConnection($"Data Source={dbPath}"))
+                using (var conn = new SqliteConnection($"Data Source={dbPath}"))
                 {
                     conn.Open();
 
@@ -86,7 +85,7 @@ namespace WpfAppCvoca.Services
 
             try
             {
-                using (var conn = new SQLiteConnection($"Data Source={dbPath}"))
+                using (var conn = new SqliteConnection($"Data Source={dbPath}"))
                 {
                     conn.Open();
 
@@ -143,7 +142,7 @@ namespace WpfAppCvoca.Services
 
             try
             {
-                using (var conn = new SQLiteConnection($"Data Source={dbPath}"))
+                using (var conn = new SqliteConnection($"Data Source={dbPath}"))
                 {
                     conn.Open();
 
@@ -187,7 +186,7 @@ namespace WpfAppCvoca.Services
             try
             {
                 int savedCount = 0;
-                using (var conn = new SQLiteConnection($"Data Source={dbPath}"))
+                using (var conn = new SqliteConnection($"Data Source={dbPath}"))
                 {
                     conn.Open();
 
