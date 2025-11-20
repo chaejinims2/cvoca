@@ -111,6 +111,15 @@
     <!-- ========== MVVM: Services ========== -->
     <Compile Include="Services\IWordRepository.cs" />
     <Compile Include="Services\SQLiteWordRepository.cs" />
+    <!-- ========== Native Libraries ========== -->
+    <Content Include="NativeLibs\x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>x64\SQLite.Interop.dll</Link>
+    </Content>
+    <Content Include="NativeLibs\x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>x86\SQLite.Interop.dll</Link>
+    </Content>
     <!-- ========== MVVM: Converters ========== -->
     <Compile Include="Converters\StepEqualsConverter.cs" />
     <Compile Include="Converters\BoolToThemeTextConverter.cs" />

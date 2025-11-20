@@ -3,8 +3,6 @@
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-x64/
-x86/
 [Ww][Ii][Nn]32/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
@@ -13,6 +11,12 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+
+# Native Libraries (SQLite native DLLs - required for cross-platform development)
+# These are source-controlled and copied to output during build
+# Exception: Include NativeLibs folder (needed for cross-platform builds)
+!WpfAppCvoca/WpfAppCvoca/NativeLibs/
+!WpfAppCvoca/WpfAppCvoca/NativeLibs/**
 
 # Visual Studio cache/options
 .vs/
