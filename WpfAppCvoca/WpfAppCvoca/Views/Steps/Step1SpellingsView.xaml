@@ -10,90 +10,27 @@
 
         <!-- 상단 툴바: Step 제목 + 오디오 컨트롤 -->
         <StackPanel Grid.Row="0" Style="{StaticResource ToolbarPanel}">
-            <TextBlock Text="{Binding StepHeaderText}"
-                       Style="{StaticResource SectionTitleText}"
-                       Foreground="{Binding Theme.ForegroundColor}" />
+            <TextBlock Text="{Binding StepHeaderText}" Style="{StaticResource SectionTitleText}" />
             <Border Width="12" />
-            <Button Content="Play Audio"
-                    Background="{Binding Theme.ButtonBackgroundColor}"
-                    Foreground="{Binding Theme.ButtonForegroundColor}" />
-            <Button Content="Stop"
-                    Background="{Binding Theme.ButtonBackgroundColor}"
-                    Foreground="{Binding Theme.ButtonForegroundColor}" />
+            <Button Content="Play Audio" />
+            <Button Content="Stop" />
         </StackPanel>
 
         <!-- 본문: Spelling 입력 그리드 -->
-        <DataGrid x:Name="SpellingDataGrid"
-                  Grid.Row="1"
-                  Margin="0,0,0,8"
-                  ItemsSource="{Binding SpellingItems}"
-                  IsReadOnly="False"
-                  Background="{Binding Theme.DataGridBackgroundColor}"
-                  Foreground="{Binding Theme.DataGridForegroundColor}"
-                  RowBackground="{Binding Theme.DataGridRowBackgroundColor}"
-                  AlternatingRowBackground="{Binding Theme.DataGridRowBackgroundColor}">
-            <DataGrid.Resources>
-                <!-- Row 스타일: Step0와 톤 통일 -->
-                <Style TargetType="DataGridRow">
-                    <Setter Property="Padding" Value="6,0" />
-                    <Setter Property="BorderThickness" Value="0,0,0,1" />
-                    <Setter Property="BorderBrush"
-                            Value="{Binding DataContext.Theme.BorderColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Setter Property="Background"
-                            Value="{Binding DataContext.Theme.DataGridRowBackgroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Setter Property="Foreground"
-                            Value="{Binding DataContext.Theme.DataGridForegroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Style.Triggers>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Background"
-                                    Value="{Binding DataContext.Theme.AccentColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                            <Setter Property="Foreground" Value="White" />
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-
-                <!-- ColumnHeader: 헤더 색상만 Theme 연동 -->
-                <Style TargetType="DataGridColumnHeader">
-                    <Setter Property="Background"
-                            Value="{Binding DataContext.Theme.DataGridHeaderBackgroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Setter Property="Foreground"
-                            Value="{Binding DataContext.Theme.DataGridHeaderForegroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                </Style>
-            </DataGrid.Resources>
-
+        <DataGrid x:Name="SpellingDataGrid" Grid.Row="1" Style="{StaticResource SubDataGrid}" ItemsSource="{Binding SpellingItems}" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="#" Width="40"
-                                    Binding="{Binding WordNo}"
-                                    IsReadOnly="True" />
-                <DataGridTextColumn Header="Your Spelling" Width="*"
-                                    Binding="{Binding UserSpelling, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <DataGridTextColumn Header="Correct" Width="*"
-                                    Binding="{Binding CorrectSpelling, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <DataGridTextColumn Header="Result" Width="60"
-                                    Binding="{Binding ResultMark}"
-                                    IsReadOnly="True" />
+                <DataGridTextColumn Header="#" Width="40" Binding="{Binding WordNo}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Your Spelling" Width="*" Binding="{Binding UserSpelling, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <DataGridTextColumn Header="Correct" Width="*" Binding="{Binding CorrectSpelling, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <DataGridTextColumn Header="Result" Width="60" Binding="{Binding ResultMark}" IsReadOnly="True" />
             </DataGrid.Columns>
         </DataGrid>
 
         <!-- 하단 툴바: 채점/저장 + 요약 -->
-        <StackPanel Grid.Row="2"
-                    Orientation="Horizontal"
-                    HorizontalAlignment="Left">
-            <Button Content="채점"
-                    Padding="12,2"
-                    Margin="0,0,8,0"
-                    Command="{Binding CheckSpellingCommand}"
-                    Background="{Binding Theme.ButtonBackgroundColor}"
-                    Foreground="{Binding Theme.ButtonForegroundColor}" />
-            <Button Content="저장"
-                    Padding="12,2"
-                    Margin="0,0,8,0"
-                    Command="{Binding SaveCommand}"
-                    Background="{Binding Theme.ButtonBackgroundColor}"
-                    Foreground="{Binding Theme.ButtonForegroundColor}" />
-            <TextBlock Text="{Binding SpellingSummary}"
-                       VerticalAlignment="Center"
-                       Foreground="{Binding Theme.ForegroundColor}" />
+        <StackPanel Grid.Row="2" Style="{StaticResource StatusbarPanel}">
+            <Button Content="Submit" Style="{StaticResource StatusbarBtn}" Command="{Binding CheckSpellingCommand}"/> 
+            <Button Content="Save" Style="{StaticResource StatusbarBtn}" Command="{Binding SaveCommand}"/>
+            <TextBlock Text="{Binding SpellingSummary}" Style="{StaticResource CaptionText}" />
         </StackPanel>
     </Grid>
 </UserControl>

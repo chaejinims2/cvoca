@@ -16,7 +16,7 @@
         <converters:BoolToThemeTextConverter x:Key="BoolToThemeTextConverter" />
     </Window.Resources>
 
-    <Grid Background="{Binding Theme.BackgroundColor}">
+    <Grid Style="{StaticResource MainGrid}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />     <!-- Title Bar -->
             <RowDefinition Height="Auto" />     <!-- Book Name + Show All -->
@@ -26,11 +26,8 @@
         </Grid.RowDefinitions>
 
         <!-- Custom Title Bar -->
-        <Border Grid.Row="0" Padding="0"
-                Background="{Binding Theme.SecondaryBackgroundColor}"
-                BorderBrush="{Binding Theme.BorderColor}"
-                BorderThickness="0,0,0,1">
-            <Grid Height="30" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+        <Border Grid.Row="0" Padding="0" Style="{StaticResource TitlebarBorder}">
+            <Grid MouseLeftButtonDown="TitleBar_MouseLeftButtonDown" Style="{StaticResource TitlebarGrid}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
@@ -39,37 +36,16 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Cvoca Dashboard" VerticalAlignment="Center" Margin="12,0,0,0"
-                           FontWeight="Bold" Foreground="{Binding Theme.ForegroundColor}" />
+                <TextBlock Text="Cvoca Dashboard" Style="{StaticResource PageTitleText}" />
 
-                <Button Grid.Column="1" Width="30" Height="30" Content="⚙"
-                        Background="{Binding Theme.ButtonBackgroundColor}"
-                        Foreground="{Binding Theme.ButtonForegroundColor}"
-                        BorderThickness="0"
-                        Click="BtnSettings_Click" />
-                <Button Grid.Column="2" Width="30" Height="30" Content="─"
-                        Background="{Binding Theme.ButtonBackgroundColor}"
-                        Foreground="{Binding Theme.ButtonForegroundColor}"
-                        BorderThickness="0"
-                        Click="BtnMinimize_Click" />
-                <Button Grid.Column="3" Width="30" Height="30" Content="▢"
-                        Background="{Binding Theme.ButtonBackgroundColor}"
-                        Foreground="{Binding Theme.ButtonForegroundColor}"
-                        BorderThickness="0"
-                        Click="BtnMaximize_Click" />
-                <Button Grid.Column="4" Width="40" Height="30" Content="✕"
-                        Background="{Binding Theme.ButtonBackgroundColor}"
-                        Foreground="{Binding Theme.ButtonForegroundColor}"
-                        BorderThickness="0"
-                        Click="BtnClose_Click" />
+                <Button Grid.Column="1" Width="30" Height="30" Content="⚙" Click="BtnSettings_Click" />
+                <Button Grid.Column="2" Width="30" Height="30" Content="─" Click="BtnMinimize_Click" />
+                <Button Grid.Column="3" Width="30" Height="30" Content="▢" Click="BtnMaximize_Click" />
+                <Button Grid.Column="4" Width="40" Height="30" Content="✕" Click="BtnClose_Click" />
             </Grid>
         </Border>
 
-        <Border Grid.Row="1" Padding="8" 
-                BorderBrush="{Binding Theme.BorderColor}" 
-                BorderThickness="0,0,0,1"
-                Background="{Binding Theme.SecondaryBackgroundColor}">
-                    
+        <Border Grid.Row="1" Padding="8" Style="{StaticResource TitlebarBorder}" >
             <Grid Margin="0,0,0,2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />  <!-- 첫 줄: 책 이름 + Show All -->
@@ -85,48 +61,29 @@
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding DatabaseName}" 
                            FontWeight="Bold" FontSize="14" 
                            Foreground="{Binding Theme.ForegroundColor}" />
-                <Button Grid.Row="0" Grid.Column="2" Content="Show All" Padding="8,2" VerticalAlignment="Center" Margin="4,0,8,4"
-                        Command="{Binding ChangeStepCommand}" CommandParameter="0"
-                        Background="{Binding Theme.AccentColor}" 
-                        Foreground="White" />
-                <Button Grid.Row="0" Grid.Column="3" 
-                        Content="{Binding Theme.IsDarkMode, Converter={StaticResource BoolToThemeTextConverter}}" 
-                        Padding="8,2" VerticalAlignment="Center" Margin="4,1,0,4"
-                        Command="{Binding Theme.ToggleThemeCommand}"
-                        Background="{Binding Theme.ButtonBackgroundColor}"
-                        Foreground="{Binding Theme.ButtonForegroundColor}" />
+                <Button Grid.Row="0" Grid.Column="2" Height="30" Content="Show All"
+                        Command="{Binding ChangeStepCommand}" CommandParameter="0"/>
+                <Button Grid.Row="0" Grid.Column="3" Content="{Binding Theme.IsDarkMode, Converter={StaticResource BoolToThemeTextConverter}}" 
+                        Command="{Binding Theme.ToggleThemeCommand}"/>
 
                 <!-- 둘째 줄: Day / Pass -->
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Day" 
                            VerticalAlignment="Center" 
                            Foreground="{Binding Theme.ForegroundColor}" />
-                <ComboBox Grid.Row="1" Grid.Column="1" x:Name="CmbDay" Width="80" Margin="4,0,8,0"
-                            ItemsSource="{Binding Days}" SelectedItem="{Binding SelectedDay}"
-                            Background="{Binding Theme.ComboBoxBackgroundColor}"
-                            Foreground="{Binding Theme.ComboBoxForegroundColor}">
-                    <ComboBox.ItemContainerStyle>
-                        <Style TargetType="ComboBoxItem">
-                            <Setter Property="Background" Value="{Binding DataContext.Theme.ComboBoxBackgroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
-                            <Setter Property="Foreground" Value="{Binding DataContext.Theme.ComboBoxForegroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
-                        </Style>
-                    </ComboBox.ItemContainerStyle>
-                </ComboBox>
+                <ComboBox Grid.Row="1" Grid.Column="1"
+                            x:Name="CmbDay"
+                            Width="80"
+                            ItemsSource="{Binding Days}"
+                            SelectedItem="{Binding SelectedDay}"
+                            Style="{StaticResource ThemedComboBox}" />
                 <TextBlock Grid.Row="1" Grid.Column="2" Text="Pass:" 
                            VerticalAlignment="Center" 
                            Foreground="{Binding Theme.ForegroundColor}" />
-                <ComboBox Grid.Row="1" Grid.Column="3" Width="60" Margin="4,0,8,0"
-                          Background="{Binding Theme.ComboBoxBackgroundColor}"
-                          Foreground="{Binding Theme.ComboBoxForegroundColor}">
-                    <ComboBox.ItemContainerStyle>
-                        <Style TargetType="ComboBoxItem">
-                            <Setter Property="Background" Value="{Binding DataContext.Theme.ComboBoxBackgroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
-                            <Setter Property="Foreground" Value="{Binding DataContext.Theme.ComboBoxForegroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
-                        </Style>
-                    </ComboBox.ItemContainerStyle>
-                    <ComboBoxItem Content="1" IsSelected="True" />
-                    <ComboBoxItem Content="2" />
-                    <ComboBoxItem Content="3" />
-                </ComboBox>
+                <ComboBox Grid.Row="1" Grid.Column="3"
+                            Width="60"
+                            ItemsSource="{Binding Passes}"
+                            SelectedItem="{Binding SelectedPass}"
+                            Style="{StaticResource ThemedComboBox}" />
             </Grid>
         </Border>
 

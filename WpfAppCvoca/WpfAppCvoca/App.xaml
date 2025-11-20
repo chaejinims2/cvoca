@@ -4,51 +4,99 @@
              xmlns:local="clr-namespace:WpfAppCvoca"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <!-- 헤더 텍스트 -->
-        <Style x:Key="PageTitleText" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="16" />
-            <Setter Property="FontWeight" Value="SemiBold" />
-            <Setter Property="Margin" Value="0,0,8,0" />
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WpfAppCvoca;component/Styles/BaseStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
 
-        <Style x:Key="SectionTitleText" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="13" />
-            <Setter Property="FontWeight" Value="SemiBold" />
-            <Setter Property="Margin" Value="0,0,8,0" />
-        </Style>
+            <!-- ========== TextBlock Styles ========== -->
+            <Style x:Key="PageTitleText" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontWeight" Value="SemiBold" />
+                <Setter Property="Margin" Value="0,0,8,0" />
+                <Setter Property="Foreground" Value="{Binding DataContext.Theme.ForegroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
+            </Style>
+            <Style x:Key="SectionTitleText" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="FontWeight" Value="SemiBold" />
+                <Setter Property="Margin" Value="0,0,8,0" />
+                <Setter Property="Foreground" Value="{Binding DataContext.Theme.ForegroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+            </Style>
+            <Style x:Key="CaptionText" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="11" />
+                <Setter Property="Margin" Value="0,0,4,0" />
+                <Setter Property="Foreground" Value="{Binding DataContext.Theme.ForegroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+            </Style>
 
-        <Style x:Key="CaptionText" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="11" />
-            <Setter Property="Margin" Value="0,0,4,0" />
-        </Style>
+            <!-- ========== Panel Styles ========== -->
+            <Style x:Key="ToolbarPanel" TargetType="StackPanel">
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="Margin" Value="0,0,0,8" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Right" />
+            </Style>
+            <Style x:Key="StatusbarPanel" TargetType="StackPanel">
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="Margin" Value="0,0,0,8" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+            </Style>
 
-        <!-- 툴바 영역용 패널 -->
-        <Style x:Key="ToolbarPanel" TargetType="StackPanel">
-            <Setter Property="Orientation" Value="Horizontal" />
-            <Setter Property="Margin" Value="0,0,0,8" />
-            <Setter Property="VerticalAlignment" Value="Center" />
-        </Style>
+            <!-- ========== Button Styles (BasedOn Base) ========== -->
+            <Style x:Key="ToolbarBtn" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                <Setter Property="Padding" Value="12,2" />
+                <Setter Property="Margin" Value="0,0,8,4" />
+            </Style>
+            <Style x:Key="StatusbarBtn" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                <Setter Property="Padding" Value="12,2" />
+                <Setter Property="Margin" Value="0,0,8,0" />
+            </Style>
 
-        <!-- 기본 버튼 스타일 – 색은 각 컨트롤에서 Theme 바인딩 -->
-        <Style TargetType="Button">
-            <Setter Property="Margin" Value="4,0,0,0" />
-            <Setter Property="Padding" Value="10,3" />
-            <Setter Property="FontSize" Value="12" />
-            <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="Cursor" Value="Hand" />
-        </Style>
+            <!-- ========== ComboBox Styles ========== -->
+            <Style x:Key="ThemedComboBox" TargetType="ComboBox">
+                <Setter Property="Margin" Value="4,0,8,0" />
+                <Setter Property="Padding" Value="4,2" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="MinWidth" Value="80" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="Background" Value="{Binding DataContext.Theme.ComboBoxBackgroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
+                <Setter Property="Foreground" Value="{Binding DataContext.Theme.ComboBoxForegroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
+                <Setter Property="ItemContainerStyle">
+                    <Setter.Value>
+                        <Style TargetType="ComboBoxItem">
+                            <Setter Property="Background" Value="{Binding DataContext.Theme.ComboBoxBackgroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
+                            <Setter Property="Foreground" Value="{Binding DataContext.Theme.ComboBoxForegroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
+                            <Setter Property="Padding" Value="4,2" />
+                        </Style>
+                    </Setter.Value>
+                </Setter>
+            </Style>
 
-        <!-- 기본 DataGrid 스타일 – 색은 여전히 Theme에서 바인딩 -->
-        <Style TargetType="DataGrid">
-            <Setter Property="AutoGenerateColumns" Value="False" />
-            <Setter Property="CanUserAddRows" Value="False" />
-            <Setter Property="CanUserDeleteRows" Value="False" />
-            <Setter Property="GridLinesVisibility" Value="None" />
-            <Setter Property="HeadersVisibility" Value="All" />
-            <Setter Property="ColumnHeaderHeight" Value="32" />
-            <Setter Property="RowHeight" Value="30" />
-            <Setter Property="Margin" Value="0,0,0,8" />
-        </Style>
+            <!-- ========== Grid Styles (BasedOn Base) ========== -->
+            <Style x:Key="MainGrid" TargetType="Grid" BasedOn="{StaticResource {x:Type Grid}}">
+                <Setter Property="Margin" Value="0,0,0,8" />
+            </Style>
+            <Style x:Key="TitlebarGrid" TargetType="Grid" BasedOn="{StaticResource {x:Type Grid}}">
+                <Setter Property="Height" Value="30" />
+            </Style>
+            <Style x:Key="SubGrid" TargetType="Grid" BasedOn="{StaticResource {x:Type Grid}}">
+                <Setter Property="Margin" Value="0,0,0,8" />
+            </Style>
 
+            <!-- ========== Border Styles ========== -->
+            <Style x:Key="TitlebarBorder" TargetType="Border" BasedOn="{StaticResource {x:Type Border}}">
+                <Setter Property="BorderThickness" Value="0,0,0,1" />
+                <Setter Property="BorderBrush" Value="{Binding DataContext.Theme.BorderColor, RelativeSource={RelativeSource AncestorType=Window}}" />
+                <Setter Property="Background" Value="{Binding DataContext.Theme.SecondaryBackgroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
+            </Style>
+
+            <!-- ========== DataGrid Styles (BasedOn Base) ========== -->
+            <Style x:Key="SubDataGrid" TargetType="DataGrid" BasedOn="{StaticResource {x:Type DataGrid}}">
+                <Setter Property="Margin" Value="0,0,0,8" />
+                <Setter Property="IsReadOnly" Value="False" />
+            </Style>
+            <Style x:Key="SubDataGridTextColumn" TargetType="DataGridTextColumn">
+                <Setter Property="IsReadOnly" Value="True" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
