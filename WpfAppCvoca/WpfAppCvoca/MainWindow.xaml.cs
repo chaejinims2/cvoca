@@ -12,6 +12,7 @@ namespace WpfAppCvoca
     public partial class MainWindow : Window
     {
         private MainViewModel _viewModel;
+        public double RowStepViewsHeight = 0.0;
 
         public MainWindow()
         {
@@ -31,12 +32,12 @@ namespace WpfAppCvoca
                 var screenLeft = targetScreen.WorkingArea.Left;
                 var screenTop = targetScreen.WorkingArea.Top;
 
-                this.Width = screenWidth / 5.0;// /2.0;
-                this.Height = screenHeight / 5.0 * 4.0 /2.0;
-                this.Left = screenLeft;// + screenWidth / 5.0 * 1.0;
-                this.Top = screenTop;// + screenHeight / 7.0;
+                this.Width = screenWidth * 0.2;
+                this.Height = screenHeight * 0.8;
+                this.Left = screenLeft + screenWidth * 0.2;
+                this.Top = screenTop + screenHeight * 0.2;
                 this.WindowState = WindowState.Normal;
-
+                RowStepViewsHeight = screenHeight * 0.7;
                 // DataContext 설정
                 _viewModel = new MainViewModel();
                 this.DataContext = _viewModel;

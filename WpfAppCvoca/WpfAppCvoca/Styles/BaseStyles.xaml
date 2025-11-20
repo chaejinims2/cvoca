@@ -4,13 +4,28 @@
     <!-- ========== Base Button Style ========== -->
     <Style TargetType="Button">
         <Setter Property="Margin" Value="4,0,0,0" /> <!-- 좌측 마진 4, 상하 마진 0 -->
-        <Setter Property="Padding" Value="10,3" />
+        <Setter Property="Padding" Value="10,3" /> <!-- 좌우 패딩 10, 상하 패딩 3 -->
         <Setter Property="FontSize" Value="12" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="Background" Value="{Binding DataContext.Theme.ButtonBackgroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
         <Setter Property="Foreground" Value="{Binding DataContext.Theme.ButtonForegroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
+    </Style>
+
+    <!-- ========== Base ToggleButton Style ========== -->
+    <Style TargetType="ToggleButton">
+        <Setter Property="Margin" Value="4,0,0,0" />
+        <Setter Property="Padding" Value="10,3" /> <!-- 좌우 패딩 10, 상하 패딩 3 -->
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Background" Value="{Binding DataContext.Theme.ToggleButtonBackgroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
+        <Setter Property="Foreground" Value="{Binding DataContext.Theme.ToggleButtonForegroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
     </Style>
 
     <!-- ========== Base Grid Style ========== -->
@@ -57,6 +72,36 @@
     <Style TargetType="DataGridColumnHeader">
         <Setter Property="Background" Value="{Binding DataContext.Theme.DataGridHeaderBackgroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
         <Setter Property="Foreground" Value="{Binding DataContext.Theme.DataGridHeaderForegroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+    </Style>
+
+    <!-- ========== Base DataGridCell Style ========== -->
+    <Style TargetType="DataGridCell">
+        <Setter Property="Foreground" Value="{Binding DataContext.Theme.DataGridForegroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Foreground" Value="White" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- ========== DataGridTextColumn ElementStyle ========== -->
+    <Style x:Key="DataGridTextColumnElementStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{Binding Foreground, RelativeSource={RelativeSource AncestorType=DataGridCell}}" />
+    </Style>
+
+    <!-- ========== DataGridTextColumn EditingElementStyle ========== -->
+    <Style x:Key="DataGridTextColumnEditingElementStyle" TargetType="TextBox">
+        <Setter Property="Foreground" Value="{Binding DataContext.Theme.DataGridForegroundColor, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Padding" Value="0" />
+    </Style>
+
+    <!-- ========== Base DataGridTextColumn Style ========== -->
+    <Style TargetType="DataGridTextColumn">
+        <Setter Property="ElementStyle" Value="{StaticResource DataGridTextColumnElementStyle}" />
+        <Setter Property="EditingElementStyle" Value="{StaticResource DataGridTextColumnEditingElementStyle}" />
     </Style>
 
     <!-- ========== Base Border Style ========== -->

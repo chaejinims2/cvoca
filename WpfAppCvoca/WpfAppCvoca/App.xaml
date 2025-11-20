@@ -11,10 +11,11 @@
 
             <!-- ========== TextBlock Styles ========== -->
             <Style x:Key="PageTitleText" TargetType="TextBlock">
+                <!-- <Setter Property="FontSize" Value="16" /> -->
                 <Setter Property="FontSize" Value="16" />
                 <Setter Property="FontWeight" Value="SemiBold" />
                 <Setter Property="Margin" Value="0,0,8,0" />
-                <Setter Property="Foreground" Value="{Binding DataContext.Theme.ForegroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
+                <Setter Property="Foreground" Value="{Binding DataContext.Theme.ForegroundColor, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
             </Style>
             <Style x:Key="SectionTitleText" TargetType="TextBlock">
                 <Setter Property="FontSize" Value="13" />
@@ -41,14 +42,14 @@
                 <Setter Property="HorizontalAlignment" Value="Left" />
             </Style>
 
-            <!-- ========== Button Styles (BasedOn Base) ========== -->
-            <Style x:Key="ToolbarBtn" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-                <Setter Property="Padding" Value="12,2" />
-                <Setter Property="Margin" Value="0,0,8,4" />
-            </Style>
-            <Style x:Key="StatusbarBtn" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <!-- ========== Button Styles ========== -->
+            <Style x:Key="ToolbarBtn" BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
+                <Setter Property="Margin" Value="0,0,8,4" /> BasedOn="{StaticResource {x:Type Button}}"
                 <Setter Property="Padding" Value="12,2" />
                 <Setter Property="Margin" Value="0,0,8,0" />
+            </Style>
+            <Style x:Key="StatusbarBtn" TargetType="Button">
+                <Setter Property="Padding" Value="12,2" />
             </Style>
 
             <!-- ========== ComboBox Styles ========== -->
@@ -71,31 +72,34 @@
                 </Setter>
             </Style>
 
-            <!-- ========== Grid Styles (BasedOn Base) ========== -->
-            <Style x:Key="MainGrid" TargetType="Grid" BasedOn="{StaticResource {x:Type Grid}}">
+            <!-- ========== Grid Styles ========== -->
+            <Style x:Key="MainGrid" TargetType="Grid">BasedOn="{StaticResource {x:Type Grid}}"
                 <Setter Property="Margin" Value="0,0,0,8" />
             </Style>
-            <Style x:Key="TitlebarGrid" TargetType="Grid" BasedOn="{StaticResource {x:Type Grid}}">
+            <Style x:Key="TitlebarGrid" TargetType="Grid">BasedOn="{StaticResource {x:Type Grid}}"
                 <Setter Property="Height" Value="30" />
             </Style>
-            <Style x:Key="SubGrid" TargetType="Grid" BasedOn="{StaticResource {x:Type Grid}}">
+            <Style x:Key="SubGrid" TargetType="Grid">BasedOn="{StaticResource {x:Type Grid}}"
                 <Setter Property="Margin" Value="0,0,0,8" />
             </Style>
 
             <!-- ========== Border Styles ========== -->
-            <Style x:Key="TitlebarBorder" TargetType="Border" BasedOn="{StaticResource {x:Type Border}}">
+            <Style x:Key="TitlebarBorder" BasedOn="{StaticResource {x:Type Border}}" TargetType="Border">
+                <Setter                Property="Padding" Value="1"/>
                 <Setter Property="BorderThickness" Value="0,0,0,1" />
-                <Setter Property="BorderBrush" Value="{Binding DataContext.Theme.BorderColor, RelativeSource={RelativeSource AncestorType=Window}}" />
-                <Setter Property="Background" Value="{Binding DataContext.Theme.SecondaryBackgroundColor, RelativeSource={RelativeSource AncestorType=Window}}" />
+                <Setter Property="BorderBrush" Value="{Binding DataContext.Theme.BorderColor, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
+                <Setter Property="Background" Value="{Binding DataContext.Theme.SecondaryBackgroundColor, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
             </Style>
 
-            <!-- ========== DataGrid Styles (BasedOn Base) ========== -->
-            <Style x:Key="SubDataGrid" TargetType="DataGrid" BasedOn="{StaticResource {x:Type DataGrid}}">
+            <!-- ========== DataGrid Styles ========== -->
+            <Style x:Key="SubDataGrid" TargetType="DataGrid">BasedOn="{StaticResource {x:Type DataGrid}}"
                 <Setter Property="Margin" Value="0,0,0,8" />
                 <Setter Property="IsReadOnly" Value="False" />
             </Style>
             <Style x:Key="SubDataGridTextColumn" TargetType="DataGridTextColumn">
                 <Setter Property="IsReadOnly" Value="True" />
+                <Setter Property="ElementStyle" Value="{StaticResource DataGridTextColumnElementStyle}" />
+                <Setter Property="EditingElementStyle" Value="{StaticResource DataGridTextColumnEditingElementStyle}" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
