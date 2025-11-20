@@ -176,4 +176,28 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
   </Target>
+  <!-- Copy SQLite native DLLs from NativeLibs to output directory -->
+  <Target Name="CopyNativeLibs" AfterTargets="Build">
+    <MakeDir Directories="$(OutputPath)x64" Condition="!Exists('$(OutputPath)x64')" />
+    <MakeDir Directories="$(OutputPath)x86" Condition="!Exists('$(OutputPath)x86')" />
+    <Copy SourceFiles="$(ProjectDir)NativeLibs\x64\SQLite.Interop.dll" 
+          DestinationFolder="$(OutputPath)x64" 
+          SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)NativeLibs\x86\SQLite.Interop.dll" 
+          DestinationFolder="$(OutputPath)x86" 
+          SkipUnchangedFiles="true" />
+  </Target>
+  <!-- Copy data folder to output directory -->
+  <Target Name="CopyDataFolder" AfterTargets="Build">
+    <PropertyGroup>
+      <DataSourcePath>$(ProjectDir)..\..\data</DataSourcePath>
+    </PropertyGroup>
+    <ItemGroup>
+      <DataFiles Include="$(DataSourcePath)\**\*" 
+                 Exclude="$(DataSourcePath)\old\**\*;$(DataSourcePath)\work\**\*;$(DataSourcePath)\output\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(DataFiles)" 
+          DestinationFiles="@(DataFiles->'$(OutputPath)data\%(RecursiveDir)%(Filename)%(Extension)')" 
+          SkipUnchangedFiles="true" />
+  </Target>
 </Project>

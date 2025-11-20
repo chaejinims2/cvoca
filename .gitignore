@@ -40,9 +40,9 @@ __pycache__/
 .Python
 
 # Database files (user data)
-*.db
-*.db-shm
-*.db-wal
+# *.db
+# *.db-shm
+# *.db-wal
 
 # User-specific data folders
 data/old/
