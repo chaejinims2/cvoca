@@ -3,7 +3,7 @@
     
     <!-- ========== Base Button Style ========== -->
     <Style TargetType="Button">
-        <Setter Property="Margin" Value="4,0,0,0" />
+        <Setter Property="Margin" Value="4,0,0,0" /> <!-- 좌측 마진 4, 상하 마진 0 -->
         <Setter Property="Padding" Value="10,3" />
         <Setter Property="FontSize" Value="12" />
         <Setter Property="BorderThickness" Value="0" />

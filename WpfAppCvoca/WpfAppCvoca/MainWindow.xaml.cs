@@ -62,9 +62,11 @@ namespace WpfAppCvoca
 
         private void SetUserControlDataContexts()
         {
+            // Step 0은 Step0ViewModel을 직접 사용
             if (Step0View != null)
-                Step0View.DataContext = _viewModel;
+                Step0View.DataContext = _viewModel?.Step0ViewModel;
 
+            // Step 1은 MainViewModel을 통해 프록시 (Step1ViewModel의 속성들을 MainViewModel이 프록시)
             if (Step1View != null)
                 Step1View.DataContext = _viewModel;
 

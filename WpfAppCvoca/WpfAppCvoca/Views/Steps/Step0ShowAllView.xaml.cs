@@ -1,5 +1,6 @@
 using System.Windows;
 using System.Windows.Controls;
+using WpfAppCvoca.ViewModels;
 
 namespace WpfAppCvoca.Views.Steps
 {
@@ -8,62 +9,58 @@ namespace WpfAppCvoca.Views.Steps
     /// </summary>
     public partial class Step0ShowAllView : UserControl
     {
+        private Step0ShowAllViewModel _viewModel;
+
         public Step0ShowAllView()
         {
             InitializeComponent();
-            this.Loaded += Step0ShowAllView_Loaded;
             this.DataContextChanged += Step0ShowAllView_DataContextChanged;
         }
 
         private void Step0ShowAllView_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            if (e.NewValue != null && SpellingDataGrid != null)
+            if (_viewModel != null)
             {
-                var viewModel = e.NewValue as WpfAppCvoca.ViewModels.MainViewModel;
-                if (viewModel != null && SpellingDataGrid.ItemsSource == null && viewModel.SpellingItems != null && viewModel.SpellingItems.Count > 0)
-                {
-                    SpellingDataGrid.ItemsSource = viewModel.SpellingItems;
-                }
+                _viewModel.PropertyChanged -= ViewModel_PropertyChanged;
+            }
+
+            _viewModel = e.NewValue as Step0ShowAllViewModel;
+            if (_viewModel != null)
+            {
+                _viewModel.PropertyChanged += ViewModel_PropertyChanged;
+                UpdateColumnVisibility();
             }
         }
 
-        
-        private void Step0ShowAllView_Loaded(object sender, RoutedEventArgs e)
+        private void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            if (this.DataContext != null)
+            if (e.PropertyName == nameof(Step0ShowAllViewModel.ShowWordColumn) ||
+                e.PropertyName == nameof(Step0ShowAllViewModel.ShowDefinitionColumn) ||
+                e.PropertyName == nameof(Step0ShowAllViewModel.ShowExampleColumn) ||
+                e.PropertyName == nameof(Step0ShowAllViewModel.LayoutMode))
             {
-                SetDataGridItemsSource();
-            }
-            else
-            {
-                var parent = this.Parent;
-                while (parent != null)
-                {
-                    if (parent is FrameworkElement fe && fe.DataContext != null)
-                    {
-                        this.DataContext = fe.DataContext;
-                        SetDataGridItemsSource();
-                        break;
-                    }
-                    parent = LogicalTreeHelper.GetParent(parent);
-                }
+                UpdateColumnVisibility();
             }
         }
 
-        private void SetDataGridItemsSource()
+        private void UpdateColumnVisibility()
         {
-            if (SpellingDataGrid == null)
+            if (_viewModel == null || WordDataGrid == null)
                 return;
 
-            var viewModel = this.DataContext as WpfAppCvoca.ViewModels.MainViewModel;
-            if (viewModel == null)
-                return;
-
-            if (SpellingDataGrid.ItemsSource == null && viewModel.SpellingItems != null && viewModel.SpellingItems.Count > 0)
+            // DataGrid 컬럼은 인덱스로 접근
+            if (WordDataGrid.Columns.Count >= 3)
             {
-                SpellingDataGrid.ItemsSource = viewModel.SpellingItems;
+                WordDataGrid.Columns[0].Visibility = _viewModel.ShowWordColumn 
+                    ? Visibility.Visible 
+                    : Visibility.Collapsed;
+                WordDataGrid.Columns[1].Visibility = _viewModel.ShowDefinitionColumn 
+                    ? Visibility.Visible 
+                    : Visibility.Collapsed;
+                WordDataGrid.Columns[2].Visibility = _viewModel.ShowExampleColumn 
+                    ? Visibility.Visible 
+                    : Visibility.Collapsed;
             }
         }
     }
 }
-

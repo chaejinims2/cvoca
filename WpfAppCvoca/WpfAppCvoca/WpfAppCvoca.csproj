@@ -105,6 +105,8 @@
     </Compile>
     <!-- MVVM: Models -->
     <Compile Include="Models\SpellingItem.cs" />
+    <Compile Include="Models\WordItem.cs" />
+    <Compile Include="Models\LayoutMode.cs" />
     <!-- MVVM: Views code-behind (Step Views) -->
     <Compile Include="Views\Steps\Step0ShowAllView.xaml.cs">
       <DependentUpon>Step0ShowAllView.xaml</DependentUpon>

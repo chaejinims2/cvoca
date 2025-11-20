@@ -12,27 +12,60 @@ namespace WpfAppCvoca.ViewModels
     {
         private readonly IWordRepository _wordRepository;
 
-        public ObservableCollection<SpellingItem> SpellingItems { get; } = new ObservableCollection<SpellingItem>();
+        public ObservableCollection<WordItem> WordItems { get; } = new ObservableCollection<WordItem>();
 
-        private string _spellingSummary;
-        public string SpellingSummary
+        public ObservableCollection<LayoutMode> LayoutModes { get; } = new ObservableCollection<LayoutMode>
         {
-            get => _spellingSummary;
+            LayoutMode.WordOnly,
+            LayoutMode.DefinitionOnly,
+            LayoutMode.ExampleOnly,
+            LayoutMode.WordDefinition,
+            LayoutMode.DefinitionExample,
+            LayoutMode.WordDefinitionExample
+        };
+
+        private LayoutMode _layoutMode = LayoutMode.WordDefinitionExample;
+        public LayoutMode LayoutMode
+        {
+            get => _layoutMode;
             set
             {
-                if (_spellingSummary != value)
+                if (_layoutMode != value)
                 {
-                    _spellingSummary = value;
-                    OnPropertyChanged(nameof(SpellingSummary));
-                    SpellingSummaryChanged?.Invoke(this, EventArgs.Empty);
+                    _layoutMode = value;
+                    OnPropertyChanged(nameof(LayoutMode));
+                    OnPropertyChanged(nameof(ShowWordColumn));
+                    OnPropertyChanged(nameof(ShowDefinitionColumn));
+                    OnPropertyChanged(nameof(ShowExampleColumn));
+                    // 레이아웃 모드가 변경되면 데이터 다시 로드
+                    LoadAllWordItems();
                 }
             }
         }
 
-        public RelayCommand CheckSpellingCommand { get; }
-        public RelayCommand SaveCommand { get; }
+        public bool ShowWordColumn
+        {
+            get => _layoutMode == LayoutMode.WordOnly ||
+                   _layoutMode == LayoutMode.WordDefinition ||
+                   _layoutMode == LayoutMode.WordDefinitionExample;
+        }
 
-        public event EventHandler SpellingSummaryChanged;
+        public bool ShowDefinitionColumn
+        {
+            get => _layoutMode == LayoutMode.DefinitionOnly ||
+                   _layoutMode == LayoutMode.WordDefinition ||
+                   _layoutMode == LayoutMode.DefinitionExample ||
+                   _layoutMode == LayoutMode.WordDefinitionExample;
+        }
+
+        public bool ShowExampleColumn
+        {
+            get => _layoutMode == LayoutMode.ExampleOnly ||
+                   _layoutMode == LayoutMode.DefinitionExample ||
+                   _layoutMode == LayoutMode.WordDefinitionExample;
+        }
+
+        public RelayCommand SaveCommand { get; }
 
         public Step0ShowAllViewModel() : this(new SQLiteWordRepository())
         {
@@ -41,70 +74,42 @@ namespace WpfAppCvoca.ViewModels
         public Step0ShowAllViewModel(IWordRepository wordRepository)
         {
             _wordRepository = wordRepository ?? throw new ArgumentNullException(nameof(wordRepository));
-            CheckSpellingCommand = new RelayCommand(_ => CheckSpelling(), _ => SpellingItems.Count > 0);
-            SaveCommand = new RelayCommand(_ => SaveSpellingChanges(), _ => SpellingItems.Count > 0);
-            LoadAllWords();
+            SaveCommand = new RelayCommand(_ => SaveChanges(), _ => WordItems.Count > 0);
+            LoadAllWordItems();
         }
 
-        public void LoadAllWords()
+        public void LoadAllWordItems()
         {
-            SpellingItems.Clear();
+            WordItems.Clear();
 
             try
             {
-                var words = _wordRepository.LoadAllWords();
-                foreach (var item in words)
+                var items = _wordRepository.LoadAllWordItems(_layoutMode);
+                foreach (var item in items)
                 {
-                    SpellingItems.Add(item);
+                    WordItems.Add(item);
                 }
             }
             catch (System.Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"LoadAllWords 오류: {ex.Message}");
-                SpellingSummary = $"오류: {ex.Message}";
+                System.Diagnostics.Debug.WriteLine($"LoadAllWordItems 오류: {ex.Message}");
                 return;
             }
 
-            SpellingSummary = string.Format("정답 0 / {0} (0%)", SpellingItems.Count);
-            OnPropertyChanged(nameof(SpellingItems));
-            OnPropertyChanged(nameof(SpellingSummary));
-            CheckSpellingCommand?.RaiseCanExecuteChanged();
+            OnPropertyChanged(nameof(WordItems));
             SaveCommand?.RaiseCanExecuteChanged();
         }
 
-        private void CheckSpelling()
-        {
-            int total = 0;
-            int correct = 0;
-
-            foreach (var item in SpellingItems)
-            {
-                total++;
-
-                string user = (item.UserSpelling ?? string.Empty).Trim();
-                string answer = (item.CorrectSpelling ?? string.Empty).Trim();
-
-                bool isCorrect = string.Equals(user, answer, StringComparison.OrdinalIgnoreCase);
-
-                item.ResultMark = isCorrect ? "O" : "X";
-                if (isCorrect)
-                    correct++;
-            }
-
-            double rate = (total > 0) ? (correct * 100.0 / total) : 0.0;
-            SpellingSummary = string.Format("정답 {0} / {1} ({2:0.#}%)", correct, total, rate);
-        }
-
-        private void SaveSpellingChanges()
+        private void SaveChanges()
         {
             try
             {
-                int savedCount = _wordRepository.UpdateWords(SpellingItems);
-                System.Diagnostics.Debug.WriteLine($"저장 완료: {savedCount}개 단어");
+                int savedCount = _wordRepository.UpdateWordItems(WordItems);
+                System.Diagnostics.Debug.WriteLine($"저장 완료: {savedCount}개 항목");
             }
             catch (System.Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"SaveSpellingChanges 오류: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"SaveChanges 오류: {ex.Message}");
             }
         }
 
@@ -115,4 +120,3 @@ namespace WpfAppCvoca.ViewModels
         }
     }
 }
-
