@@ -177,7 +177,7 @@
     <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
   </Target>
   <!-- Copy SQLite native DLLs from NativeLibs to output directory -->
-  <Target Name="CopyNativeLibs" AfterTargets="Build">
+  <!-- <Target Name="CopyNativeLibs" AfterTargets="Build">
     <MakeDir Directories="$(OutputPath)x64" Condition="!Exists('$(OutputPath)x64')" />
     <MakeDir Directories="$(OutputPath)x86" Condition="!Exists('$(OutputPath)x86')" />
     <Copy SourceFiles="$(ProjectDir)NativeLibs\x64\SQLite.Interop.dll" 
@@ -186,7 +186,7 @@
     <Copy SourceFiles="$(ProjectDir)NativeLibs\x86\SQLite.Interop.dll" 
           DestinationFolder="$(OutputPath)x86" 
           SkipUnchangedFiles="true" />
-  </Target>
+  </Target> -->
   <!-- Copy data folder to output directory -->
   <Target Name="CopyDataFolder" AfterTargets="Build">
     <PropertyGroup>
