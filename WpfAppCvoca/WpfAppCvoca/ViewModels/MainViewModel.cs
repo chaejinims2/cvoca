@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.SQLite;
 using System.Windows;
 using WpfAppCvoca.Models;
 using WpfAppCvoca.Commands;
@@ -42,7 +43,7 @@ namespace WpfAppCvoca.ViewModels
                 // 기본 경로에 DB가 없으면 폴백 경로 사용
                 try
                 {
-                    if (!System.IO.File.Exists(dbPath))
+                    //if (!System.IO.File.Exists(dbPath))
                     {
                         string fallbackDir = @"C:\Users\cjim\source\data\ielts_voca_20_30";
                         string fallbackDb = System.IO.Path.Combine(fallbackDir, "ielts_voca_20_30.db");
