@@ -37,11 +37,7 @@ namespace WpfAppCvoca.Services
 
                     using (var cmd = conn.CreateCommand())
                     {
-                        cmd.CommandText = @"
-                            SELECT word_id, day_no, word_no, word
-                            FROM words
-                            ORDER BY day_no, word_no;
-                        ";
+                        cmd.CommandText = SQLiteQueries.LoadAllWords;
 
                         using (var reader = cmd.ExecuteReader())
                         {
@@ -91,12 +87,7 @@ namespace WpfAppCvoca.Services
 
                     using (var cmd = conn.CreateCommand())
                     {
-                        cmd.CommandText = @"
-                            SELECT word_id, day_no, word_no, word
-                            FROM words
-                            WHERE day_no = @day_no
-                            ORDER BY word_no;
-                        ";
+                        cmd.CommandText = SQLiteQueries.LoadWordsByDay;
                         cmd.Parameters.AddWithValue("@day_no", dayNo);
 
                         using (var reader = cmd.ExecuteReader())
@@ -148,11 +139,7 @@ namespace WpfAppCvoca.Services
 
                     using (var cmd = conn.CreateCommand())
                     {
-                        cmd.CommandText = @"
-                            UPDATE words
-                            SET word = @word
-                            WHERE word_id = @word_id;
-                        ";
+                        cmd.CommandText = SQLiteQueries.UpdateWord;
                         cmd.Parameters.AddWithValue("@word", word);
                         cmd.Parameters.AddWithValue("@word_id", wordId);
 
@@ -194,11 +181,7 @@ namespace WpfAppCvoca.Services
                     {
                         using (var cmd = conn.CreateCommand())
                         {
-                            cmd.CommandText = @"
-                                UPDATE words
-                                SET word = @word
-                                WHERE word_id = @word_id;
-                            ";
+                            cmd.CommandText = SQLiteQueries.UpdateWord;
 
                             foreach (var item in wordsToUpdate)
                             {
@@ -246,113 +229,27 @@ namespace WpfAppCvoca.Services
                         switch (layoutMode)
                         {
                             case LayoutMode.WordOnly:
-                                // Word Only: words 테이블만, PK: WordId
-                                cmd.CommandText = @"
-                                    SELECT 
-                                        w.word_id,
-                                        w.day_no,
-                                        w.word_no,
-                                        w.word,
-                                        0 as definition_id,
-                                        0 as example_id,
-                                        '' as definition,
-                                        '' as example
-                                    FROM words w
-                                    ORDER BY w.day_no, w.word_no;
-                                ";
+                                cmd.CommandText = SQLiteQueries.LoadWordOnly;
                                 break;
 
                             case LayoutMode.DefinitionOnly:
-                                // Definition Only: definitions 테이블만, PK: DefinitionId
-                                cmd.CommandText = @"
-                                    SELECT 
-                                        d.word_id,
-                                        COALESCE(w.day_no, 0) as day_no,
-                                        COALESCE(w.word_no, 0) as word_no,
-                                        COALESCE(w.word, '') as word,
-                                        d.definition_id,
-                                        0 as example_id,
-                                        d.definition,
-                                        '' as example
-                                    FROM definitions d
-                                    LEFT JOIN words w ON d.word_id = w.word_id
-                                    ORDER BY d.word_id, d.sense_no;
-                                ";
+                                cmd.CommandText = SQLiteQueries.LoadDefinitionOnly;
                                 break;
 
                             case LayoutMode.ExampleOnly:
-                                // Example Only: examples 테이블만, PK: ExampleId
-                                cmd.CommandText = @"
-                                    SELECT 
-                                        COALESCE(d.word_id, 0) as word_id,
-                                        COALESCE(w.day_no, 0) as day_no,
-                                        COALESCE(w.word_no, 0) as word_no,
-                                        COALESCE(w.word, '') as word,
-                                        d.definition_id,
-                                        e.example_id,
-                                        COALESCE(d.definition, '') as definition,
-                                        e.example_sentence as example
-                                    FROM examples e
-                                    LEFT JOIN definitions d ON e.definition_id = d.definition_id
-                                    LEFT JOIN words w ON d.word_id = w.word_id
-                                    ORDER BY e.example_id;
-                                ";
+                                cmd.CommandText = SQLiteQueries.LoadExampleOnly;
                                 break;
 
                             case LayoutMode.WordDefinition:
-                                // Word + Definition: words와 definitions 조인, PK: DefinitionId
-                                cmd.CommandText = @"
-                                    SELECT 
-                                        w.word_id,
-                                        w.day_no,
-                                        w.word_no,
-                                        w.word,
-                                        d.definition_id,
-                                        0 as example_id,
-                                        d.definition,
-                                        '' as example
-                                    FROM words w
-                                    INNER JOIN definitions d ON w.word_id = d.word_id
-                                    ORDER BY w.day_no, w.word_no, d.sense_no;
-                                ";
+                                cmd.CommandText = SQLiteQueries.LoadWordDefinition;
                                 break;
 
                             case LayoutMode.DefinitionExample:
-                                // Definition + Example: definitions와 examples 조인, PK: ExampleId
-                                cmd.CommandText = @"
-                                    SELECT 
-                                        COALESCE(d.word_id, 0) as word_id,
-                                        COALESCE(w.day_no, 0) as day_no,
-                                        COALESCE(w.word_no, 0) as word_no,
-                                        COALESCE(w.word, '') as word,
-                                        d.definition_id,
-                                        e.example_id,
-                                        d.definition,
-                                        e.example_sentence as example
-                                    FROM definitions d
-                                    INNER JOIN examples e ON d.definition_id = e.definition_id
-                                    LEFT JOIN words w ON d.word_id = w.word_id
-                                    ORDER BY d.word_id, d.sense_no, e.example_no;
-                                ";
+                                cmd.CommandText = SQLiteQueries.LoadDefinitionExample;
                                 break;
 
                             case LayoutMode.WordDefinitionExample:
-                                // Word + Definition + Example: words, definitions, examples 조인, PK: ExampleId
-                                cmd.CommandText = @"
-                                    SELECT 
-                                        w.word_id,
-                                        w.day_no,
-                                        w.word_no,
-                                        w.word,
-                                        d.definition_id,
-                                        e.example_id,
-                                        d.definition,
-                                        e.example_sentence as example
-                                    FROM words w
-                                    INNER JOIN definitions d ON w.word_id = d.word_id
-                                    INNER JOIN examples e ON d.definition_id = e.definition_id
-                                    ORDER BY w.day_no, w.word_no, d.sense_no, e.example_no;
-                                ";
+                                cmd.CommandText = SQLiteQueries.LoadWordDefinitionExample;
                                 break;
                         }
 
@@ -412,18 +309,7 @@ namespace WpfAppCvoca.Services
 
                     using (var cmd = conn.CreateCommand())
                     {
-                        // word_id에 해당하는 첫 번째 definition을 업데이트
-                        cmd.CommandText = @"
-                            UPDATE definitions
-                            SET definition = @definition
-                            WHERE definition_id = (
-                                SELECT definition_id 
-                                FROM definitions 
-                                WHERE word_id = @word_id 
-                                ORDER BY sense_no 
-                                LIMIT 1
-                            );
-                        ";
+                        cmd.CommandText = SQLiteQueries.UpdateWordItemDefinition;
                         cmd.Parameters.AddWithValue("@definition", definition);
                         cmd.Parameters.AddWithValue("@word_id", wordId);
 
@@ -458,19 +344,7 @@ namespace WpfAppCvoca.Services
 
                     using (var cmd = conn.CreateCommand())
                     {
-                        // word_id에 해당하는 첫 번째 definition의 첫 번째 example을 업데이트
-                        cmd.CommandText = @"
-                            UPDATE examples
-                            SET example_sentence = @example
-                            WHERE example_id = (
-                                SELECT e.example_id
-                                FROM examples e
-                                JOIN definitions d ON e.definition_id = d.definition_id
-                                WHERE d.word_id = @word_id
-                                ORDER BY d.sense_no, e.example_no
-                                LIMIT 1
-                            );
-                        ";
+                        cmd.CommandText = SQLiteQueries.UpdateWordItemExample;
                         cmd.Parameters.AddWithValue("@example", example);
                         cmd.Parameters.AddWithValue("@word_id", wordId);
 
@@ -510,27 +384,67 @@ namespace WpfAppCvoca.Services
 
                     using (var transaction = conn.BeginTransaction())
                     {
-                        foreach (var item in itemsToUpdate)
+                        using (var cmd = conn.CreateCommand())
                         {
-                            // Word 업데이트
-                            if (!string.IsNullOrEmpty(item.Word))
+                            foreach (var item in itemsToUpdate)
                             {
-                                UpdateWordItemWord(item.WordId, item.Word);
-                                savedCount++;
-                            }
+                                // Word 업데이트
+                                if (!string.IsNullOrEmpty(item.Word))
+                                {
+                                    cmd.CommandText = @"
+                                        UPDATE words
+                                        SET word = @word
+                                        WHERE word_id = @word_id;
+                                    ";
+                                    cmd.Parameters.Clear();
+                                    cmd.Parameters.AddWithValue("@word", item.Word);
+                                    cmd.Parameters.AddWithValue("@word_id", item.WordId);
+                                    cmd.ExecuteNonQuery();
+                                    savedCount++;
+                                }
 
-                            // Definition 업데이트
-                            if (!string.IsNullOrEmpty(item.Definition))
-                            {
-                                UpdateWordItemDefinition(item.WordId, item.Definition);
-                                savedCount++;
-                            }
+                                // Definition 업데이트
+                                if (!string.IsNullOrEmpty(item.Definition))
+                                {
+                                    cmd.CommandText = @"
+                                        UPDATE definitions
+                                        SET definition = @definition
+                                        WHERE definition_id = (
+                                            SELECT definition_id 
+                                            FROM definitions 
+                                            WHERE word_id = @word_id 
+                                            ORDER BY sense_no 
+                                            LIMIT 1
+                                        );
+                                    ";
+                                    cmd.Parameters.Clear();
+                                    cmd.Parameters.AddWithValue("@definition", item.Definition);
+                                    cmd.Parameters.AddWithValue("@word_id", item.WordId);
+                                    cmd.ExecuteNonQuery();
+                                    savedCount++;
+                                }
 
-                            // Example 업데이트
-                            if (!string.IsNullOrEmpty(item.Example))
-                            {
-                                UpdateWordItemExample(item.WordId, item.Example);
-                                savedCount++;
+                                // Example 업데이트
+                                if (!string.IsNullOrEmpty(item.Example))
+                                {
+                                    cmd.CommandText = @"
+                                        UPDATE examples
+                                        SET example_sentence = @example
+                                        WHERE example_id = (
+                                            SELECT e.example_id
+                                            FROM examples e
+                                            JOIN definitions d ON e.definition_id = d.definition_id
+                                            WHERE d.word_id = @word_id
+                                            ORDER BY d.sense_no, e.example_no
+                                            LIMIT 1
+                                        );
+                                    ";
+                                    cmd.Parameters.Clear();
+                                    cmd.Parameters.AddWithValue("@example", item.Example);
+                                    cmd.Parameters.AddWithValue("@word_id", item.WordId);
+                                    cmd.ExecuteNonQuery();
+                                    savedCount++;
+                                }
                             }
                         }
                         transaction.Commit();

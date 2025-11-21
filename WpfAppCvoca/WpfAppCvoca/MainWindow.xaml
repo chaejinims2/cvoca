@@ -4,10 +4,8 @@
         xmlns:converters="clr-namespace:WpfAppCvoca.Converters"
         xmlns:steps="clr-namespace:WpfAppCvoca.Views.Steps"
         xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
-        Title="Cvoca Dashboard"
-        WindowStartupLocation="Manual"
-        WindowStyle="None"
-        Loaded="Window_Loaded" ResizeMode="CanResize" ShowInTaskbar="True">
+        Title="Cvoca Dashboard" WindowStartupLocation="Manual" WindowStyle="None"
+        ResizeMode="CanResize" ShowInTaskbar="True">
     <WindowChrome.WindowChrome>
         <shell:WindowChrome CaptionHeight="0" ResizeBorderThickness="6" GlassFrameThickness="0" UseAeroCaptionButtons="False" />
     </WindowChrome.WindowChrome>

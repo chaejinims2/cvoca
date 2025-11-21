@@ -16,14 +16,15 @@ namespace WpfAppCvoca
         public MainWindow()
         {
             InitializeComponent();
+
+            this.Loaded += MainWindow_Loaded;
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {
-                // 윈도우 위치/크기 설정
-                // 마지막 모니터 사용 (모니터가 여러 개일 때 가장 오른쪽 모니터)
+                // 윈도우 위치/크기 설정: 마지막 모니터 사용 (모니터가 여러 개일 때 가장 오른쪽 모니터)
                 Screen targetScreen = Screen.AllScreens[Screen.AllScreens.Length - 1];
 
                 var screenWidth = targetScreen.WorkingArea.Width;
@@ -35,8 +36,9 @@ namespace WpfAppCvoca
                 this.Height = screenHeight / 5.0 * 4.0 /2.0;
                 this.Left = screenLeft;// + screenWidth / 5.0 * 1.0;
                 this.Top = screenTop;// + screenHeight / 7.0;
-                this.WindowState = WindowState.Normal;
 
+                this.WindowState = WindowState.Normal;
+                this.ResizeMode = ResizeMode.CanResize;
                 // DataContext 설정
                 _viewModel = new MainViewModel();
                 this.DataContext = _viewModel;

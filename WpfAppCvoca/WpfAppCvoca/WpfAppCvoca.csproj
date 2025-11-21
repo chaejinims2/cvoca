@@ -136,6 +136,7 @@
     <!-- MVVM: Services -->
     <Compile Include="Services\IWordRepository.cs" />
     <Compile Include="Services\SQLiteWordRepository.cs" />
+    <Compile Include="Services\SQLiteQueries.cs" />
     <!-- MVVM: Converters -->
     <Compile Include="Converters\BoolToThemeTextConverter.cs" />
     <Compile Include="Converters\StepEqualsConverter.cs" />
