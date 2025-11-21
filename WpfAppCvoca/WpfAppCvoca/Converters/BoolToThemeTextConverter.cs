@@ -10,9 +10,9 @@ namespace WpfAppCvoca.Converters
         {
             if (value is bool isDarkMode)
             {
-                return isDarkMode ? "🌞" : "🌙";
+                return isDarkMode ? "☼" : "☾"; // ☀
             }
-            return "🌙";
+            return "☾";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

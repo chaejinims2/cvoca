@@ -17,37 +17,39 @@ namespace WpfAppCvoca.ViewModels
         // VSCode Dark Theme 색상 상수
         private static class DarkColors
         {
-            public static readonly Color Background = Color.FromRgb(0x1E, 0x1E, 0x1E);
-            public static readonly Color SecondaryBackground = Color.FromRgb(0x25, 0x25, 0x26);
-            public static readonly Color Border = Color.FromRgb(0x3C, 0x3C, 0x3C);
-            public static readonly Color Accent = Color.FromRgb(0x00, 0x7A, 0xCC);
-            public static readonly Color DataGridRow = Color.FromRgb(0x2D, 0x2D, 0x30);
-            public static readonly Color DataGridHeader = Color.FromRgb(0x33, 0x33, 0x33);
-            public static readonly Color ScrollBarBackground = Color.FromRgb(0x25, 0x25, 0x26);
-            public static readonly Color ScrollBarThumb = Color.FromRgb(0x3F, 0x3F, 0x46);
-            public static readonly Color ScrollBarThumbHover = Color.FromRgb(0x5A, 0x5A, 0x5F);
-            public static readonly Color StatusBar = Color.FromRgb(0x2D, 0x2D, 0x30);
-            public static readonly Color Button = Color.FromRgb(0x3A, 0x3D, 0x41);
-            public static readonly Color ComboBox = Color.FromRgb(0x2D, 0x2D, 0x30);
-            public static readonly Color ToggleButton = Color.FromRgb(0x3A, 0x3D, 0x41);
+            public static readonly Color Foreground = Color.FromRgb(0xCC, 0xCC, 0xCC); // #CCCCCC - 부드러운 회색
+            public static readonly Color Background = Color.FromRgb(0x1E, 0x1E, 0x1E); // #1E1E1E - 어두운 회색
+            public static readonly Color SecondaryBackground = Color.FromRgb(0x25, 0x25, 0x26); // #252526 - 어두운 회색
+            public static readonly Color Border = Color.FromRgb(0x3C, 0x3C, 0x3C); // #3C3C3C - 어두운 회색
+            public static readonly Color Accent = Color.FromRgb(0x22, 0x22, 0x22); // #222222 - 행 선택 시 배경색
+            public static readonly Color DataGridRow = Color.FromRgb(0x2D, 0x2D, 0x30); // #2D2D30 - 어두운 회색
+            public static readonly Color DataGridHeader = Color.FromRgb(0x33, 0x33, 0x33); // #333333 - 어두운 회색
+            public static readonly Color ScrollBarBackground = Color.FromRgb(0x25, 0x25, 0x26); // #252526 - 어두운 회색
+            public static readonly Color ScrollBarThumb = Color.FromRgb(0x3F, 0x3F, 0x46); // #3F3F46 - 어두운 회색
+            public static readonly Color ScrollBarThumbHover = Color.FromRgb(0x5A, 0x5A, 0x5F); // #5A5A5F - 어두운 회색
+            public static readonly Color StatusBar = Color.FromRgb(0x2D, 0x2D, 0x30); // #2D2D30 - 어두운 회색
+            public static readonly Color Button = Color.FromRgb(0x3A, 0x3D, 0x41); // #3A3D41 - 어두운 회색
+            public static readonly Color ComboBox = Color.FromRgb(0x2D, 0x2D, 0x30); // #2D2D30 - 어두운 회색
+            public static readonly Color ToggleButton = Color.FromRgb(0x3A, 0x3D, 0x41); // #3A3D41 - 어두운 회색
         }
 
         // Light Theme 색상 상수
         private static class LightColors
         {
-            public static readonly Color Background = Colors.White;
-            public static readonly Color SecondaryBackground = Color.FromRgb(0xFD, 0xFD, 0xFD);
-            public static readonly Color Border = Color.FromRgb(0xD3, 0xD3, 0xD3);
-            public static readonly Color Accent = Color.FromRgb(0x00, 0x78, 0xD7);
-            public static readonly Color DataGridRow = Colors.White;
-            public static readonly Color DataGridHeader = Color.FromRgb(0xF0, 0xF0, 0xF0);
-            public static readonly Color ScrollBarBackground = Color.FromRgb(0xF0, 0xF0, 0xF0);
-            public static readonly Color ScrollBarThumb = Color.FromRgb(0xC8, 0xC8, 0xC8);
-            public static readonly Color ScrollBarThumbHover = Color.FromRgb(0xB4, 0xB4, 0xB4);
-            public static readonly Color StatusBar = Color.FromRgb(0xF0, 0xF0, 0xF0);
-            public static readonly Color Button = Color.FromRgb(0xF0, 0xF0, 0xF0);
-            public static readonly Color ComboBox = Colors.White;
-            public static readonly Color ToggleButton = Color.FromRgb(0xF0, 0xF0, 0xF0);
+            public static readonly Color Foreground = Color.FromRgb(0x1E, 0x1E, 0x1E); // #1E1E1E - 어두운 회색
+            public static readonly Color Background = Colors.White; // #FFFFFF - 밝은 회색
+            public static readonly Color SecondaryBackground = Color.FromRgb(0xFD, 0xFD, 0xFD); // #FDFFFF - 밝은 회색
+            public static readonly Color Border = Color.FromRgb(0xD3, 0xD3, 0xD3); // #D3D3D3 - 밝은 회색
+            public static readonly Color Accent = Color.FromRgb(0x00, 0x78, 0xD7); // #0078D7 - 파란색
+            public static readonly Color DataGridRow = Colors.White; // #FFFFFF - 밝은 회색
+            public static readonly Color DataGridHeader = Color.FromRgb(0xF0, 0xF0, 0xF0); // #F0F0F0 - 밝은 회색
+            public static readonly Color ScrollBarBackground = Color.FromRgb(0xF0, 0xF0, 0xF0); // #F0F0F0 - 밝은 회색
+            public static readonly Color ScrollBarThumb = Color.FromRgb(0xC8, 0xC8, 0xC8); // #C8C8C8 - 밝은 회색
+            public static readonly Color ScrollBarThumbHover = Color.FromRgb(0xB4, 0xB4, 0xB4); // #B4B4B4 - 밝은 회색
+            public static readonly Color StatusBar = Color.FromRgb(0xF0, 0xF0, 0xF0); // #F0F0F0 - 밝은 회색
+            public static readonly Color Button = Color.FromRgb(0xF0, 0xF0, 0xF0); // #F0F0F0 - 밝은 회색
+            public static readonly Color ComboBox = Colors.White; // #FFFFFF - 밝은 회색
+            public static readonly Color ToggleButton = Color.FromRgb(0xF0, 0xF0, 0xF0); // #F0F0F0 - 밝은 회색
         }
 
         private ThemeMode _currentTheme = ThemeMode.Light;
@@ -409,25 +411,25 @@ namespace WpfAppCvoca.ViewModels
             if (_currentTheme == ThemeMode.Dark)
             {
                 BackgroundColor = Brush(DarkColors.Background);
-                ForegroundColor = Brushes.White;
+                ForegroundColor = Brush(DarkColors.Foreground);
                 SecondaryBackgroundColor = Brush(DarkColors.SecondaryBackground);
                 BorderColor = Brush(DarkColors.Border);
                 AccentColor = Brush(DarkColors.Accent);
                 DataGridBackgroundColor = Brush(DarkColors.Background);
-                DataGridForegroundColor = Brushes.White;
+                DataGridForegroundColor = Brush(DarkColors.Foreground);
                 DataGridRowBackgroundColor = Brush(DarkColors.DataGridRow);
                 DataGridHeaderBackgroundColor = Brush(DarkColors.DataGridHeader);
-                DataGridHeaderForegroundColor = Brushes.White;
+                DataGridHeaderForegroundColor = Brush(DarkColors.Foreground);
                 ScrollBarBackgroundColor = Brush(DarkColors.ScrollBarBackground);
                 ScrollBarThumbColor = Brush(DarkColors.ScrollBarThumb);
                 ScrollBarThumbHoverColor = Brush(DarkColors.ScrollBarThumbHover);
                 StatusBarBackgroundColor = Brush(DarkColors.StatusBar);
                 ButtonBackgroundColor = Brush(DarkColors.Button);
-                ButtonForegroundColor = Brushes.White;
+                ButtonForegroundColor = Brush(DarkColors.Foreground);
                 ComboBoxBackgroundColor = Brush(DarkColors.ComboBox);
                 ComboBoxForegroundColor = Brushes.White;
                 ToggleButtonBackgroundColor = Brush(DarkColors.ToggleButton);
-                ToggleButtonForegroundColor = Brushes.White;
+                ToggleButtonForegroundColor = Brush(DarkColors.Foreground);
             }
             else // Light
             {

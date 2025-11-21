@@ -26,11 +26,7 @@
         </Grid>
 
         <!-- 본문: 동적 컬럼 DataGrid -->
-        <DataGrid x:Name="WordDataGrid" 
-                  Grid.Row="1" 
-                  Style="{StaticResource SubDataGrid}" 
-                  ItemsSource="{Binding WordItems}"
-                  AutoGenerateColumns="False">
+        <DataGrid x:Name="WordDataGrid" Grid.Row="1" Style="{StaticResource SubDataGrid}" ItemsSource="{Binding WordItems}" >
             <DataGrid.Resources>
                 <Style x:Key="WordColumnStyle" TargetType="DataGridColumnHeader">
                     <Setter Property="Visibility" Value="{Binding DataContext.ShowWordColumn, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BooleanToVisibilityConverter}}" />

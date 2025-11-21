@@ -12,6 +12,7 @@ namespace WpfAppCvoca
     public partial class MainWindow : Window
     {
         private MainViewModel _viewModel;
+        public double RowStepViewsHeight = 0.0;
 
         public MainWindow()
         {

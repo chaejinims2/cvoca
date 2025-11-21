@@ -16,14 +16,14 @@
 
     <Grid Style="{StaticResource MainGrid}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />     <!-- Title Bar -->
-            <RowDefinition Height="Auto" />     <!-- Book Name + Show All -->
-            <RowDefinition Height="Auto" />     <!-- Day / Pass -->
-            <RowDefinition Height="*" />        <!-- Step Views -->
-            <RowDefinition Height="Auto" />     <!-- Status Bar -->
+            <RowDefinition Height="Auto" />     <!-- 1. Title Bar -->
+            <RowDefinition Height="Auto" />     <!-- 2. Book Name + Show All + Day / Pass -->
+            <RowDefinition Height="Auto" />     <!-- 3. Step Toggle Buttons -->
+            <RowDefinition Height="{Binding RowStepViewsHeight}" />        <!-- 4. Step Views -->
+            <RowDefinition Height="Auto" />     <!-- 5. Status Bar -->
         </Grid.RowDefinitions>
 
-        <!-- Custom Title Bar -->
+        <!-- 1. Custom Title Bar -->
         <Border Grid.Row="0" Padding="0" Style="{StaticResource TitlebarBorder}">
             <Grid MouseLeftButtonDown="TitleBar_MouseLeftButtonDown" Style="{StaticResource TitlebarGrid}">
                 <Grid.ColumnDefinitions>
@@ -44,6 +44,7 @@
             </Grid>
         </Border>
 
+        <!-- 2. Book Name + Show All + Day / Pass -->
         <Border Grid.Row="1" Padding="8" Style="{StaticResource TitlebarBorder}" >
             <Grid Margin="0,0,0,2">
                 <Grid.RowDefinitions>
@@ -56,7 +57,7 @@
                     <ColumnDefinition Width="Auto" />  <!-- 버튼/콤보박스 -->
                     <ColumnDefinition Width="Auto" />  <!-- 콤보박스/추가 -->
                 </Grid.ColumnDefinitions>
-                <!-- 첫 줄: 책 이름 + Show All 버튼 -->
+                <!-- 2.1 Book Name + Show All -->
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding DatabaseName}" 
                            FontWeight="Bold" FontSize="14" 
                            Foreground="{Binding Theme.ForegroundColor}" />
@@ -64,19 +65,16 @@
                         Command="{Binding Theme.ToggleThemeCommand}"/> -->
                 <Button Grid.Row="0" Grid.Column="3" Content="Home" Command="{Binding ChangeStepCommand}" CommandParameter="0"/>
 
-                <!-- 둘째 줄: Day / Pass -->
-                <TextBlock Grid.Row="1" Grid.Column="0" Text="Day" 
-                           VerticalAlignment="Center" 
-                           Foreground="{Binding Theme.ForegroundColor}" />
+                
+                <!-- 2.2 Day / Pass -->
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Day" Style="{StaticResource LabelText}"/>
                 <ComboBox Grid.Row="1" Grid.Column="1"
                             x:Name="CmbDay"
                             Width="80"
                             ItemsSource="{Binding Days}"
                             SelectedItem="{Binding SelectedDay}"
                             Style="{StaticResource ThemedComboBox}" />
-                <TextBlock Grid.Row="1" Grid.Column="2" Text="Pass:" 
-                           VerticalAlignment="Center" 
-                           Foreground="{Binding Theme.ForegroundColor}" />
+                <TextBlock Grid.Row="1" Grid.Column="2" Text="Pass:" Style="{StaticResource LabelText}"/>
                 <ComboBox Grid.Row="1" Grid.Column="3"
                             Width="60"
                             ItemsSource="{Binding Passes}"
@@ -85,29 +83,16 @@
             </Grid>
         </Border>
 
-        <Border Grid.Row="2" Padding="4,4,4,4" 
-                BorderBrush="{Binding Theme.BorderColor}" 
-                BorderThickness="0,0,0,1"
-                Background="{Binding Theme.SecondaryBackgroundColor}">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <ToggleButton Content="1. Spellings" Width="110" Margin="2,0"
-                              IsChecked="{Binding CurrentStep, Mode=OneWay, Converter={StaticResource StepEqualsConverter}, ConverterParameter=1}"
-                              Command="{Binding ChangeStepCommand}" CommandParameter="1"
-                              Background="{Binding Theme.ToggleButtonBackgroundColor}"
-                              Foreground="{Binding Theme.ToggleButtonForegroundColor}" />
-                <ToggleButton Content="2. Meanings" Width="110" Margin="2,0"
-                              IsChecked="{Binding CurrentStep, Mode=OneWay, Converter={StaticResource StepEqualsConverter}, ConverterParameter=2}"
-                              Command="{Binding ChangeStepCommand}" CommandParameter="2"
-                              Background="{Binding Theme.ToggleButtonBackgroundColor}"
-                              Foreground="{Binding Theme.ToggleButtonForegroundColor}" />
-                <ToggleButton Content="3. Examples" Width="110" Margin="2,0"
-                              IsChecked="{Binding CurrentStep, Mode=OneWay, Converter={StaticResource StepEqualsConverter}, ConverterParameter=3}"
-                              Command="{Binding ChangeStepCommand}" CommandParameter="3"
-                              Background="{Binding Theme.ToggleButtonBackgroundColor}"
-                              Foreground="{Binding Theme.ToggleButtonForegroundColor}" />
+        <!-- 3. Step Toggle Buttons -->
+        <Border Grid.Row="2" Padding="4,4,4,4">
+            <StackPanel Style="{StaticResource TitlebarPanel}">
+                <ToggleButton Content="1. Spellings" Command="{Binding ChangeStepCommand}" CommandParameter="1" IsChecked="{Binding CurrentStep, Mode=OneWay, Converter={StaticResource StepEqualsConverter}, ConverterParameter=1}" />
+                <ToggleButton Content="2. Meanings" Command="{Binding ChangeStepCommand}" CommandParameter="2" IsChecked="{Binding CurrentStep, Mode=OneWay, Converter={StaticResource StepEqualsConverter}, ConverterParameter=2}" />
+                <ToggleButton Content="3. Examples" Command="{Binding ChangeStepCommand}" CommandParameter="3" IsChecked="{Binding CurrentStep, Mode=OneWay, Converter={StaticResource StepEqualsConverter}, ConverterParameter=3}" />
             </StackPanel>
         </Border>
 
+        <!-- 4. Step Views -->
         <Grid Grid.Row="3">
             <Border x:Name="PanelStepShowAll" Padding="8" 
                     Background="{Binding Theme.SecondaryBackgroundColor}"
@@ -131,6 +116,7 @@
             </Border>
         </Grid>
 
+        <!-- 5. Status Bar -->
         <StatusBar Grid.Row="4" Background="{Binding Theme.StatusBarBackgroundColor}">
             <StatusBarItem>
                 <TextBlock Text="{Binding DefaultSummary}" 
